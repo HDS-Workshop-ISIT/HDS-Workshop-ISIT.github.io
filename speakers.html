@@ -11,10 +11,12 @@
     <title>Invited Speakers - Universality and Dynamics Workshop</title>
 
     <style>
-        /* --- 继承自 index.html 的全局样式 --- */
+        /* --- 基础样式 (保持一致) --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
+            margin: 0;
+            padding-bottom: 50px;
         }
 
         .banner {
@@ -37,6 +39,8 @@
             text-align: left;
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
+            padding-left: 20px; /* 防止内容贴边 */
+            padding-right: 20px;
         }
         
         .header-info .main-title {
@@ -60,6 +64,7 @@
             text-align: center;
         }
 
+        /* 标题统一 */
         h2 {
             font-family: Georgia, "Times New Roman", Times, serif !important; 
             color: #8B3A3A !important; 
@@ -67,6 +72,7 @@
             font-size: 2.2em;
             margin-top: 30px;
             margin-bottom: 20px;
+            text-align: center; /* 标题居中看起来更平衡 */
         }
         
         h2 i {
@@ -74,7 +80,7 @@
             font-size: 0.9em;
         }
 
-        /* 导航栏样式 (需保持与 index 一致) */
+        /* 导航栏 */
         table.navigation {
             width: 100%;
             border-collapse: collapse;
@@ -97,85 +103,101 @@
             color: #8B3A3A;
         }
 
-        /* --- Invited Speakers 专用样式 (新增) --- */
+        /* --- Invited Speakers 布局修正 --- */
+        
+        /* 1. 限制内容宽度的容器，防止 Bio 溢出屏幕 */
         .speaker-section {
-            margin-bottom: 60px;
-            max-width: 1200px;
-            /* 如果页面居中可以取消注释下面这行 */
-            /* margin: 0 auto; */ 
+            width: 90%;          /* 默认占90%宽度 */
+            max-width: 1000px;   /* 最大宽度限制在1000px，类似于 Sponsors 表格 */
+            margin: 0 auto;      /* 居中 */
+            padding: 0 15px;
         }
         
-        /* 顶部说明文字 */
         .speaker-note {
+            text-align: center;
             font-style: italic;
             color: #666;
             margin-bottom: 40px;
             font-size: 16px;
-            border-left: 4px solid #8B3A3A;
-            padding-left: 15px;
         }
 
-        /* Speaker 卡片容器 */
+        /* Speaker 编号标题 */
+        .speaker-label {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            color: #8B3A3A;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            width: 100%;
+            display: block;
+        }
+
+        /* 卡片容器 Flex */
         .speaker-card {
-            display: flex; /* 启用 Flex 布局 */
+            display: flex; 
             flex-direction: row;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 40px;
-            margin-bottom: 40px;
-            gap: 40px; /* 左右栏间距 */
-        }
-        
-        .speaker-card:last-child {
-            border-bottom: none;
+            margin-bottom: 50px;
+            gap: 40px; 
+            align-items: flex-start; /* 顶部对齐 */
         }
 
-        /* 左侧栏：照片 + 名字 + 机构 */
+        /* --- 左侧样式 (复刻 Organizer 图片风格) --- */
         .speaker-left {
-            flex: 0 0 250px; /* 固定宽度 250px */
+            flex: 0 0 220px; /* 固定宽度，容纳图片 */
             text-align: center;
         }
 
+        /* 完全复刻 index.html 中 .organizer-img 的样式 */
         .speaker-photo {
-            width: 220px;
-            height: 220px; /* 正方形照片 */
-            object-fit: cover;
+            width: 200px; 
+            height: 250px; /* 长方形比例 */
+            object-fit: cover; 
+            object-position: top; 
+            display: block;      
+            margin: 0 auto 15px auto; 
+            background-color: transparent; 
+            border: none; 
+            padding: 0;            
+            box-shadow: none; 
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border: 1px solid #eee;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        
+        .speaker-photo:hover {
+            opacity: 0.9;
+            transform: translateY(-5px); /* 悬浮上移特效 */
         }
 
         .speaker-name {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .speaker-inst {
             font-size: 16px;
             color: #666;
-            line-height: 1.5;
-            font-weight: 500;
+            line-height: 1.4;
         }
 
-        /* 右侧栏：Bio 简介 */
+        /* --- 右侧 Bio 样式 --- */
         .speaker-right {
-            flex: 1; /* 自动填充剩余宽度 */
-            display: flex;
-            flex-direction: column;
+            flex: 1; 
+            min-width: 0; /* 关键：防止 Flex 子元素在溢出时不换行 */
         }
         
         .speaker-bio {
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #444;
-            text-align: justify; /* 两端对齐，看起来更正式 */
-            margin: 0;
+            text-align: justify; 
+            margin-top: 0; /* 顶部与图片对齐 */
         }
         
         .speaker-bio strong {
-            color: #8B3A3A; /* Bio 标签颜色 */
+            color: #2c3e50;
         }
 
         /* 移动端适配 */
@@ -186,7 +208,6 @@
             }
             .speaker-left {
                 margin-bottom: 20px;
-                flex: none;
                 width: 100%;
             }
             .speaker-right {
@@ -195,6 +216,7 @@
         }
         
         footer {
+            text-align: center;
             margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid #ddd;
@@ -243,14 +265,18 @@
     <h2><i class="fas fa-microphone-lines"></i>Invited Speakers</h2>
     
     <p class="speaker-note">
-        The speakers are listed in the order of their presentation.
+        These speakers are listed in the order of their presentation.
     </p>
 
+    <!-- 使用 speaker-section 容器来限制宽度 -->
     <div class="speaker-section">
         
+        <!-- Speaker 1 Block -->
+        <div class="speaker-label">Speaker 1</div>
         <div class="speaker-card">
             <div class="speaker-left">
-                <img src="assets/speaker_placeholder.png" alt="Speaker Name" class="speaker-photo">
+                <!-- 这里暂时用 assets/org_rishabh.png 替代，你可以换成 speaker 的真实图片 -->
+                <img src="assets/org_rishabh.png" alt="Speaker Name" class="speaker-photo">
                 <div class="speaker-name">Speaker Name</div>
                 <div class="speaker-inst">
                     Department of Electrical Engineering<br>
@@ -264,13 +290,16 @@
                     This is a placeholder for the speaker's biography. 
                     High-dimensional statistics deals with data where the dimension is comparable to or larger than the sample size. 
                     The speaker has made significant contributions to the understanding of phase transitions in these regimes. 
-                    <br><br>
                     Their research focuses on the intersection of information theory and statistical physics, providing sharp asymptotic characterizations of learning algorithms.
-                    (You can add more text here. The layout ensures the right side is wider and expands to fill the space, while the left side remains a fixed column.)
+                    <br><br>
+                    (This text block is now constrained within a max-width container, so it will not overflow the screen edges even on large monitors. It aligns nicely with the rest of the page content.)
                 </p>
             </div>
         </div>
-        </div>
+
+        <!-- 如果有 Speaker 2，只需复制上面的 block 并修改 label 为 Speaker 2 -->
+        
+    </div>
     
     <footer>
         &copy; Universality and Dynamics Workshop 2026
