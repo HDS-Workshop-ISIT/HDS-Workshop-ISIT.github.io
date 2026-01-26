@@ -3,48 +3,48 @@
 
 <head>
     <base href=".">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <meta name="description" content="Universality and Dynamics in High-Dimensional Learning and Inference">
     <title>Universality and Dynamics in High-Dimensional Learning and Inference</title>
-
+    
     <style>
-        /* --- 全局默认字体 --- */
+        /* --- 全局默认字体：无衬线 (Sans-serif) --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
 
-        /* Banner */
+        /* Banner 图片样式 */
         .banner {
             width: 100%;
-            height: 400px; 
+            height: 400px;
             overflow: hidden;
             line-height: 0;
             border-bottom: 5px solid #eee;
         }
+
         .banner img {
             width: 100%;
-            height: 100%; 
-            object-fit: cover; 
-            object-position: center; 
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
             display: block;
         }
 
-        /* 头部信息 */
+        /* --- 头部信息样式 --- */
         .header-info {
             padding: 30px 0;
             text-align: left;
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
         }
-        
+
         .header-info .main-title {
-            font-family: Georgia, "Times New Roman", Times, serif; 
-            font-size: 34px; 
-            font-weight: bold; 
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 34px;
+            font-weight: bold;
             line-height: 1.3;
         }
 
@@ -53,8 +53,9 @@
             font-size: 20px;
             color: #666;
             font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        
+
         .header-info i {
             color: #555;
             margin-right: 5px;
@@ -62,116 +63,142 @@
             text-align: center;
         }
 
-        /* 标题样式 */
+        /* --- 页面内标题样式 (红色 Serif) --- */
         h2 {
-            font-family: Georgia, "Times New Roman", Times, serif !important; 
-            color: #8B3A3A !important; 
+            font-family: Georgia, "Times New Roman", Times, serif !important;
+            color: #8B3A3A !important;
             font-weight: normal;
             font-size: 2.2em;
             margin-top: 30px;
             margin-bottom: 20px;
         }
+
+        /* 标题内的图标样式：增加右侧间距 */
         h2 i {
             margin-right: 12px;
             font-size: 0.9em;
+            /* 图标稍微比文字小一点点,视觉更平衡 */
         }
 
+        /* 正文段落 */
         p {
             font-size: 18px;
             line-height: 1.6;
             color: #444;
         }
 
-        /* --- Organizers 表格样式 --- */
+        /* --- Organizers 样式 --- */
         .sponsors {
             width: 100%;
-            max-width: 1200px; 
+            max-width: 1200px;
             margin: 0 auto;
-            table-layout: fixed; 
+            table-layout: fixed;
         }
+
         .sponsors td {
-            text-align: center; 
+            text-align: center;
             vertical-align: top;
-            padding: 0 15px 30px 15px; 
+            padding: 0 15px 30px 15px;
         }
+
         .organizer-img {
-            width: 200px; 
-            height: 250px; 
-            object-fit: cover; 
-            object-position: top; 
-            display: block;      
-            margin: 0 auto 15px auto; 
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            margin: 0 auto 15px auto;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            box-shadow: none;
             border-radius: 8px;
             transition: transform 0.2s, opacity 0.2s;
         }
+
         .organizer-img:hover {
             opacity: 0.9;
             transform: translateY(-5px);
         }
+
         .sponsor a {
-            text-decoration: none; 
+            text-decoration: none;
             color: #333;
-            display: block; 
+            display: block;
         }
+
         .sponsor strong {
             display: block;
-            font-size: 18px; 
+            font-size: 18px;
             margin-bottom: 5px;
             color: #2c3e50;
             transition: color 0.3s;
         }
+
+        /* 鼠标悬浮在 Organizer 卡片上时,名字变蓝 */
         .sponsor a:hover strong {
             color: #4682B4;
         }
+
+        /* 鼠标悬浮在 Organizer 卡片上时,显示名字旁边的图标 */
         .sponsor a:hover .hover-icon {
             opacity: 1;
             transform: translate(2px, -2px);
         }
+
         .sponsor span {
-            font-size: 16px; 
+            font-size: 16px;
             color: #666;
         }
 
-        /* --- Navigation 导航栏样式 --- */
-        /* 注意：如果 nav 样式在 assets/main.css 里，这里不需要动。
-           假设这里使用了默认样式，如果不显示请检查 css 文件。
-           此处为了预览效果，添加基础 nav 样式 */
-        table.navigation {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            background-color: #f8f9fa;
-        }
-        td.navigation {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        td.navigation a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            font-weight: bold;
-            display: block;
-        }
-        td.navigation a:hover, td.navigation a.current {
-            color: #8B3A3A;
-        }
-
         /* --- Contact 样式 --- */
-        .contact-list p { margin-bottom: 20px; }
-        .contact-email { color: #4682B4; text-decoration: none; margin-left: 5px; }
-        .contact-email:hover { text-decoration: underline; }
-        .contact-name { color: #2c3e50; text-decoration: none; font-weight: bold; transition: color 0.3s; position: relative; }
-        .contact-name:hover { color: #4682B4; text-decoration: underline; }
-        .hover-icon { font-size: 0.8em; margin-left: 5px; opacity: 0; transition: opacity 0.3s, transform 0.3s; color: #4682B4; }
-        .contact-name:hover .hover-icon { opacity: 1; transform: translate(2px, -2px); }
+        .contact-list p {
+            margin-bottom: 20px;
+        }
 
+        .contact-email {
+            color: #4682B4;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        /* --- 名字悬浮特效通用样式 --- */
+        .contact-name {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .contact-name:hover {
+            color: #4682B4;
+            text-decoration: underline;
+        }
+
+        /* 悬浮图标样式 (默认隐藏) */
+        .hover-icon {
+            font-size: 0.8em;
+            margin-left: 5px;
+            opacity: 0;
+            /* 默认不显示 */
+            transition: opacity 0.3s, transform 0.3s;
+            color: #4682B4;
+            /* 图标也是蓝色 */
+        }
+
+        .contact-name:hover .hover-icon {
+            opacity: 1;
+            transform: translate(2px, -2px);
+        }
     </style>
 </head>
 
 <body>
-
     <div class="banner">
         <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
     </div>
@@ -181,68 +208,70 @@
             <span style="color: #8B3A3A;">Universality and Dynamics</span><br>
             <span style="color: #4682B4;">in High-Dimensional Learning and Inference</span>
         </div>
-        
         <div class="meta-info">
-            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp;
             <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
         </div>
     </div>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a class="current" title="Home Page" href="index.html">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
-            </td>
-            <td class="navigation">
-                <a title="Workshop Program" href="program.html">Program</a> 
-            </td>
-            <td class="navigation">
-                <a title="Invited Speakers" href="speakers.html">Invited Speakers</a>
-            </td>
-        </tr>
-    </table>
+<table class="navigation">
+    <tr>
+        <td class="navigation">
+            <a class="current" title="Home Page" href="index.html">Home</a>
+        </td>
+        <td class="navigation">
+            <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+        </td>
+        <td class="navigation">
+            <a title="Workshop Program" href="program.html">Program</a> 
+        </td>
+        <td class="navigation">
+            <a title="Invited Speakers" href="invited-speakers.html">Invited Speakers</a>
+        </td>
+    </tr>
+</table>
+
 
     <h2><i class="fas fa-chalkboard-user"></i>About the Workshop</h2>
     <p>
-        <strong>High-dimensional learning and inference</strong> have recently seen a string of rigorous results showing that both learning performance and dynamics obey universal mean-field laws. 
+        <strong>High-dimensional learning and inference</strong> have recently seen a string of rigorous results
+        showing that both learning performance and dynamics obey universal mean-field laws.
     </p>
     <p>
-        This workshop aims to bring together researchers from information theory, machine learning (ML), high-dimensional statistics, random matrix theory, and statistical physics, to develop a unified view of these advances. Topics include dynamical mean-field limits for learning algorithms, universality and Gaussian equivalence in and beyond generalized linear models, universality of iterative algorithms such as AMP, and information-theoretic questions motivated by these asymptotic laws.
-    </p>
-
-    <h2><i class="fas fa-users"></i>Organizers</h2>
-    
-    <table class="sponsors"> 
+        This workshop aims to bring together researchers from information theory, machine learning (ML),
+        high-dimensional statistics, random matrix theory, and statistical physics, to develop a unified view of
+        these advances. Topics include dynamical mean-field limits for learning algorithms, universality and
+        Gaussian equivalence in and beyond generalized linear models, universality of iterative algorithms such as="fas fa-users"></i>Organizers</h2>
+    <p></p>
+    <table class="sponsors">
         <tr>
             <td class="sponsor">
-                <a href="https://www.columbia.edu/~rd2714/" target="_blank"> 
+                <a href
+        AMP, and information-theoretic questions motivated by these asymptotic laws.
+    </p>
+
+    <h2><i class="https://www.columbia.edu/~rd2714/" target="_blank">
                     <img src="assets/org_rishabh.png" alt="Rishabh Dudeja" class="organizer-img">
                     <strong>Rishabh Dudeja <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>UW Madison</span>
                 </a>
             </td>
-            
             <td class="sponsor">
-                <a href="https://zhenyu-liao.github.io/" target="_blank"> 
+                <a href="https://zhenyu-liao.github.io/" target="_blank">
                     <img src="assets/org_zhenyu.png" alt="Zhenyu Liao" class="organizer-img">
                     <strong>Zhenyu Liao <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>HUST</span>
                 </a>
             </td>
-
             <td class="sponsor">
-                <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank"> 
+                <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank">
                     <img src="assets/org_junjie.png" alt="Junjie Ma" class="organizer-img">
                     <strong>Junjie Ma <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>CAS</span>
                 </a>
             </td>
-
             <td class="sponsor">
-                <a href="https://sites.google.com/site/malekiarian/" target="_blank"> 
+                <a href="https://sites.google.com/site/malekiarian/" target="_blank">
                     <img src="assets/org_arian.png" alt="Arian Maleki" class="organizer-img">
                     <strong>Arian Maleki <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>Columbia University</span>
@@ -250,22 +279,23 @@
             </td>
         </tr>
     </table>
-    
+
     <h2><i class="fas fa-address-card"></i>Contact</h2>
     <div class="contact-list" style="margin-bottom: 50px;">
         <p>
-            For inquiries regarding the workshop, please contact 
+            For inquiries regarding the workshop, please contact
             <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank" class="contact-name">
-                Junjie Ma 
-            </a> 
-            at 
+                Junjie Ma
+            </a>
+            at
             <a href="mailto:majunjie@lsec.cc.ac.cn" class="contact-email">majunjie@lsec.cc.ac.cn</a>
         </p>
     </div>
-    
+
     <footer>
         &copy; Universality and Dynamics Workshop 2026
     </footer>
 
 </body>
+
 </html>
