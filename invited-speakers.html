@@ -56,7 +56,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         
-        .header-info i {
+        .header-info .meta-info i {
             color: #555;
             margin-right: 5px;
             width: 15px;
@@ -97,17 +97,29 @@
             border-left: 4px solid #8B3A3A;
         }
 
+        /* --- Speaker 整体容器，确保不超出导航栏宽度 --- */
+        .speakers-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Speaker 序号标题 --- */
+        .speaker-number {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.8em;
+            color: #8B3A3A;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
         /* --- Speaker 容器样式 --- */
         .speaker-container {
             display: flex;
             margin-bottom: 50px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #ddd;
             gap: 40px;
-        }
-
-        .speaker-container:last-child {
-            border-bottom: none;
         }
 
         /* 左侧信息区 (窄) */
@@ -153,14 +165,36 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
+        /* Biography 小标题 */
+        .bio-title {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.4em;
+            color: #4682B4;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bio-title i {
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Biography 内容框 */
         .speaker-bio {
             font-size: 17px;
             line-height: 1.7;
             color: #444;
             text-align: justify;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .speaker-bio p {
@@ -215,45 +249,57 @@
         <i class="fas fa-info-circle"></i> The speakers are listed in the order of their presentations.
     </div>
 
-    <!-- Speaker 1 模板 -->
-    <div class="speaker-container">
-        <div class="speaker-left">
-            <img src="assets/speaker1.jpg" alt="Speaker 1" class="speaker-photo">
-            <div class="speaker-name">Speaker Name</div>
-            <div class="speaker-affiliation">University/Institution Name</div>
-        </div>
+    <div class="speakers-wrapper">
         
-        <div class="speaker-right">
-            <div class="speaker-bio">
-                <p>
-                    This is where the speaker's biography and research interests will be displayed. 
-                    You can include multiple paragraphs to describe their background, achievements, 
-                    and current research focus.
-                </p>
-                <p>
-                    Additional information about their contributions to the field, notable publications, 
-                    awards, and their relevance to the workshop theme can be added here.
-                </p>
+        <!-- Speaker 1 -->
+        <div class="speaker-number">Speaker 1</div>
+        <div class="speaker-container">
+            <div class="speaker-left">
+                <img src="assets/kitten4.jpg" alt="Speaker 1" class="speaker-photo">
+                <div class="speaker-name">Speaker Name</div>
+                <div class="speaker-affiliation">University/Institution Name</div>
+            </div>
+            
+            <div class="speaker-right">
+                <div class="bio-title">
+                    <i class="fas fa-user-circle"></i>Biography
+                </div>
+                <div class="speaker-bio">
+                    <p>
+                        This is where the speaker's biography and research interests will be displayed. 
+                        You can include multiple paragraphs to describe their background, achievements, 
+                        and current research focus.
+                    </p>
+                    <p>
+                        Additional information about their contributions to the field, notable publications, 
+                        awards, and their relevance to the workshop theme can be added here.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- 后续可以继续添加 Speaker 2, Speaker 3... 使用相同的结构 -->
-    <!--
-    <div class="speaker-container">
-        <div class="speaker-left">
-            <img src="assets/speaker2.jpg" alt="Speaker 2" class="speaker-photo">
-            <div class="speaker-name">Speaker 2 Name</div>
-            <div class="speaker-affiliation">University/Institution Name</div>
-        </div>
-        
-        <div class="speaker-right">
-            <div class="speaker-bio">
-                <p>Speaker 2's biography...</p>
+        <!-- Speaker 2 模板 (可以继续添加) -->
+        <!--
+        <div class="speaker-number">Speaker 2</div>
+        <div class="speaker-container">
+            <div class="speaker-left">
+                <img src="assets/speaker2.jpg" alt="Speaker 2" class="speaker-photo">
+                <div class="speaker-name">Speaker 2 Name</div>
+                <div class="speaker-affiliation">University/Institution Name</div>
+            </div>
+            
+            <div class="speaker-right">
+                <div class="bio-title">
+                    <i class="fas fa-user-circle"></i>Biography
+                </div>
+                <div class="speaker-bio">
+                    <p>Speaker 2's biography...</p>
+                </div>
             </div>
         </div>
+        -->
+
     </div>
-    -->
 
     <footer>
         &copy; Universality and Dynamics Workshop 2026
