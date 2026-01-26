@@ -47,25 +47,26 @@
         /* --- 核心修改区域 Start --- */
         /* 组织者头像样式 */
         .organizer-img {
-            /* 设定一个统一的相框大小 */
+            /* 设定相框大小 */
             height: 180px;
-            width: 160px; /* 稍微设置宽一点，适应横向照片 */
+            width: 160px; 
             
-            /* 【核心修改】关键属性：contain */
-            /* 含义：保持原图比例，将完整图片放入这个框中。绝不裁剪。 */
-            /* 如果比例不合，会在四周留白。 */
+            /* 保持原比例，完整显示 */
             object-fit: contain; 
-            object-position: center; /* 图片在框中居中显示 */
+            object-position: center; 
             
             display: block;     
             margin-bottom: 10px;
-            border: 1px solid #ddd; 
-            /* 增加一个浅灰背景色，这样留白区域看起来是相框的一部分，更整洁 */
-            background-color: #f4f4f4; 
+            
+            /* 【修改点：统一白色背景框】 */
+            background-color: #fff; /* 1. 设置背景为纯白 */
+            border: 1px solid #ddd; /* 2. 保留浅灰色边框线，勾勒轮廓 */
+            padding: 5px;           /* 3. 【关键】增加内边距。这会强迫图片四周留白，确保第4张图也有白框 */
+            
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
             transition: opacity 0.2s;
             
-            /* 确保图片在自己的容器里水平居中 */
+            /* 居中 */
             margin-left: auto;
             margin-right: auto;
         }
@@ -77,19 +78,16 @@
 
         /* 表格样式调整 */
         .sponsors td {
-            /* 为了配合 contain 的留白效果，建议将单元格内容居中对齐 */
             text-align: center; 
             vertical-align: top;
             padding-bottom: 20px;
-            /* 去掉了之前的 padding-right，改用居中对齐来控制间距 */
             padding-left: 10px; 
             padding-right: 10px;
         }
-        /* 调整名字和机构的对齐方式 */
         .sponsor a {
-            text-decoration: none; /* 去掉链接下划线，看起来更干净 */
+            text-decoration: none; 
             color: #333;
-            display: block; /* 让链接占满整个单元格宽度，便于居中 */
+            display: block; 
         }
     </style>
 </head>
