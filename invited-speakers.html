@@ -98,112 +98,123 @@
         }
 
         /* --- Speaker 整体容器，确保不超出导航栏宽度 --- */
-        .speakers-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+/* --- Speaker 整体容器，确保不超出导航栏宽度 --- */
+.speakers-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-        /* --- Speaker 序号标题 --- */
-        .speaker-number {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 1.8em;
-            color: #8B3A3A;
-            font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
+/* --- Speaker 序号标题 --- */
+.speaker-number {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.8em;
+    color: #8B3A3A;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
 
-        /* --- Speaker 容器样式 --- */
-        .speaker-container {
-            display: flex;
-            margin-bottom: 50px;
-            gap: 40px;
-        }
+/* --- Speaker 容器样式 --- */
+.speaker-container {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
-        /* 左侧信息区 (窄) */
-        .speaker-left {
-            flex: 0 0 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+/* 左侧信息区 (窄) */
+.speaker-left {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .speaker-photo {
-            width: 220px;
-            height: 270px;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.speaker-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .speaker-photo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
+.speaker-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
 
-        .speaker-name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
+.speaker-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
 
-        .speaker-affiliation {
-            font-size: 17px;
-            color: #666;
-            line-height: 1.4;
-        }
+.speaker-affiliation {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.4;
+}
 
-        /* 右侧简介区 (宽) */
-        .speaker-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+/* 右侧简介区 (宽) */
+.speaker-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    max-width: 100%;
+}
 
-        /* Biography 小标题 */
-        .bio-title {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 1.4em;
-            color: #4682B4;
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
+/* Biography 小标题 */
+.bio-title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.4em;
+    color: #4682B4;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
 
-        .bio-title i {
-            margin-right: 10px;
-            font-size: 0.9em;
-        }
+.bio-title i {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
 
-        /* Biography 内容框 */
-        .speaker-bio {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #444;
-            text-align: justify;
-            padding: 25px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+/* Biography 内容框 */
+.speaker-bio {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
-        .speaker-bio p {
-            margin-bottom: 15px;
-        }
+.speaker-bio p {
+    margin-bottom: 15px;
+}
 
-        .speaker-bio p:last-child {
-            margin-bottom: 0;
-        }
+.speaker-bio p:last-child {
+    margin-bottom: 0;
+}
 
     </style>
 </head>
