@@ -72,6 +72,12 @@
             margin-top: 30px;
             margin-bottom: 20px;
         }
+        
+        /* 标题内的图标样式：增加右侧间距 */
+        h2 i {
+            margin-right: 12px;
+            font-size: 0.9em; /* 图标稍微比文字小一点点，视觉更平衡 */
+        }
 
         /* 正文段落 */
         p {
@@ -124,7 +130,20 @@
             font-size: 18px; 
             margin-bottom: 5px;
             color: #2c3e50;
+            transition: color 0.3s;
         }
+        
+        /* 鼠标悬浮在 Organizer 卡片上时，名字变蓝 */
+        .sponsor a:hover strong {
+            color: #4682B4;
+        }
+
+        /* 鼠标悬浮在 Organizer 卡片上时，显示名字旁边的图标 */
+        .sponsor a:hover .hover-icon {
+            opacity: 1;
+            transform: translate(2px, -2px);
+        }
+
         .sponsor span {
             font-size: 16px; 
             color: #666;
@@ -133,10 +152,6 @@
         /* --- Contact 样式 --- */
         .contact-list p {
             margin-bottom: 20px; 
-        }
-        .contact-list strong {
-            color: #2c3e50;
-            font-weight: 600;
         }
         .contact-email {
             color: #4682B4;
@@ -147,6 +162,34 @@
             text-decoration: underline;
         }
 
+        /* --- 名字悬浮特效通用样式 --- */
+        .contact-name {
+            color: #2c3e50; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative; 
+        }
+        
+        .contact-name:hover {
+            color: #4682B4; 
+            text-decoration: underline;
+        }
+
+        /* 悬浮图标样式 (默认隐藏) */
+        .hover-icon {
+            font-size: 0.8em;
+            margin-left: 5px;
+            opacity: 0; /* 默认不显示 */
+            transition: opacity 0.3s, transform 0.3s;
+            color: #4682B4; /* 图标也是蓝色 */
+        }
+
+        .contact-name:hover .hover-icon {
+            opacity: 1; 
+            transform: translate(2px, -2px); 
+        }
+        
     </style>
 </head>
 
@@ -185,7 +228,7 @@
         </tr>
     </table>
 
-    <h2>About the Workshop</h2>
+    <h2><i class="fas fa-chalkboard-user"></i>About the Workshop</h2>
     <p>
         <strong>High-dimensional learning and inference</strong> have recently seen a string of rigorous results showing that both learning performance and dynamics obey universal mean-field laws. 
     </p>
@@ -193,7 +236,7 @@
         This workshop aims to bring together researchers from information theory, machine learning (ML), high-dimensional statistics, random matrix theory, and statistical physics, to develop a unified view of these advances. Topics include dynamical mean-field limits for learning algorithms, universality and Gaussian equivalence in and beyond generalized linear models, universality of iterative algorithms such as AMP, and information-theoretic questions motivated by these asymptotic laws.
     </p>
 
-    <h2>Organizers</h2>
+    <h2><i class="fas fa-users"></i>Organizers</h2>
     <p></p>
     
     <table class="sponsors"> 
@@ -201,7 +244,7 @@
             <td class="sponsor">
                 <a href="https://www.columbia.edu/~rd2714/" target="_blank"> 
                     <img src="assets/org_rishabh.png" alt="Rishabh Dudeja" class="organizer-img">
-                    <strong>Rishabh Dudeja</strong>
+                    <strong>Rishabh Dudeja <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>UW Madison</span>
                 </a>
             </td>
@@ -209,7 +252,7 @@
             <td class="sponsor">
                 <a href="https://zhenyu-liao.github.io/" target="_blank"> 
                     <img src="assets/org_zhenyu.png" alt="Zhenyu Liao" class="organizer-img">
-                    <strong>Zhenyu Liao</strong>
+                    <strong>Zhenyu Liao <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>HUST</span>
                 </a>
             </td>
@@ -217,7 +260,7 @@
             <td class="sponsor">
                 <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank"> 
                     <img src="assets/org_junjie.png" alt="Junjie Ma" class="organizer-img">
-                    <strong>Junjie Ma</strong>
+                    <strong>Junjie Ma <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>CAS</span>
                 </a>
             </td>
@@ -225,17 +268,22 @@
             <td class="sponsor">
                 <a href="https://sites.google.com/site/malekiarian/" target="_blank"> 
                     <img src="assets/org_arian.png" alt="Arian Maleki" class="organizer-img">
-                    <strong>Arian Maleki</strong>
+                    <strong>Arian Maleki <i class="fas fa-external-link-alt hover-icon"></i></strong>
                     <span>Columbia University</span>
                 </a>
             </td>
         </tr>
     </table>
 
-    <h2>Contact</h2>
+    <h2><i class="fas fa-address-card"></i>Contact</h2>
     <div class="contact-list" style="margin-bottom: 50px;">
         <p>
-            For inquiries regarding the workshop, please contact <strong>Junjie Ma</strong> at 
+            For inquiries regarding the workshop, please contact 
+            <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank" class="contact-name">
+                Junjie Ma 
+                <i class="fas fa-external-link-alt hover-icon"></i>
+            </a> 
+            at 
             <a href="mailto:majunjie@lsec.cc.ac.cn" class="contact-email">majunjie@lsec.cc.ac.cn</a>
         </p>
     </div>
