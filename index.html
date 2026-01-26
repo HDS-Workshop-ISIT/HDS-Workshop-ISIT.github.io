@@ -10,33 +10,46 @@
     <title>Universality and Dynamics in High-Dimensional Learning and Inference</title>
 
     <style>
-        /* Banner 图片样式 */
+        /* Banner 样式修改：
+           1. 去掉固定高度，让内容撑开
+           2. 图片宽度 100%，高度自动 (auto)
+        */
         .banner {
             position: relative;
             width: 100%;
-            height: 400px; 
             overflow: hidden;
+            line-height: 0; /* 消除图片底部的微小空隙 */
         }
         .banner img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
+            height: auto;   /* 关键：高度自适应，保证图片不裁剪、不变形 */
+            display: block;
         }
         
-        /* 组织者头像强制统一大小样式 */
-        .organizer-img {
-            width: 150px;       /* 强制宽度 */
-            height: 150px;      /* 强制高度 */
-            object-fit: cover;  /* 关键：自动裁切，不变形 */
-            border-radius: 50%; /* 变成圆形，如果想要方形请删除这一行 */
-            border: 3px solid #eee;
-            margin-bottom: 10px;
+        /* 恢复文字的行高，防止被上面的 line-height: 0 影响 */
+        .banner .top-left, .banner .bottom-right {
+            line-height: normal; 
         }
-        
-        /* 调整标题字号，因为标题比较长 */
+
+        /* 标题文字调整 */
         .banner .title1 { font-size: 36px; }
         .banner .title2 { font-size: 28px; display: block; margin-top: 5px;}
+        
+        /* 组织者头像样式 */
+        .organizer-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #eee;
+            margin-bottom: 10px;
+            transition: transform 0.2s; /* 添加一个小动画效果 */
+        }
+        /* 鼠标悬停时头像轻微放大，提示可点击 */
+        .organizer-img:hover {
+            transform: scale(1.05);
+            border-color: #ccc;
+        }
     </style>
 </head>
 
@@ -80,34 +93,37 @@
 
     <h2>Organizers</h2>
     <p>
-        
     </p>
     
     <table class="sponsors">
         <tr>
             <td class="sponsor" style="vertical-align: top; width: 25%;">
-                <a href=""> <img src="assets/org_rishabh.jpg" alt="Rishabh Dudeja" class="organizer-img">
+                <a href="https://www.columbia.edu/~rd2714/" target="_blank"> 
+                    <img src="assets/org_rishabh.png" alt="Rishabh Dudeja" class="organizer-img">
                     <br><strong>Rishabh Dudeja</strong>
                     <br><span style="font-size: 0.9em;">UW Madison</span>
                 </a>
             </td>
             
             <td class="sponsor" style="vertical-align: top; width: 25%;">
-                <a href=""> <img src="assets/org_zhenyu.jpg" alt="Zhenyu Liao" class="organizer-img">
+                <a href="https://zhenyu-liao.github.io/" target="_blank"> 
+                    <img src="assets/org_zhenyu.png" alt="Zhenyu Liao" class="organizer-img">
                     <br><strong>Zhenyu Liao</strong>
                     <br><span style="font-size: 0.9em;">HUST</span>
                 </a>
             </td>
 
             <td class="sponsor" style="vertical-align: top; width: 25%;">
-                <a href=""> <img src="assets/org_junjie.jpg" alt="Junjie Ma" class="organizer-img">
+                <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank"> 
+                    <img src="assets/org_junjie.png" alt="Junjie Ma" class="organizer-img">
                     <br><strong>Junjie Ma</strong>
                     <br><span style="font-size: 0.9em;">CAS</span>
                 </a>
             </td>
 
             <td class="sponsor" style="vertical-align: top; width: 25%;">
-                <a href=""> <img src="assets/org_arian.jpg" alt="Arian Maleki" class="organizer-img">
+                <a href="https://sites.google.com/site/malekiarian/" target="_blank"> 
+                    <img src="assets/org_arian.png" alt="Arian Maleki" class="organizer-img">
                     <br><strong>Arian Maleki</strong>
                     <br><span style="font-size: 0.9em;">Columbia University</span>
                 </a>
