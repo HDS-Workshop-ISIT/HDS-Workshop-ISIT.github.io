@@ -39,17 +39,18 @@
             margin-bottom: 20px;
         }
         
+        /* 主标题：字号 34px，加粗 */
         .header-info .main-title {
             font-family: Georgia, "Times New Roman", Times, serif; 
             font-size: 34px; 
-            /* 修改点：这里改为 bold (加粗) */
             font-weight: bold; 
             line-height: 1.3;
         }
 
+        /* 修改点：Meta 信息行字号加大到 20px */
         .header-info .meta-info {
             margin-top: 15px;
-            font-size: 15px;
+            font-size: 20px; /* 之前是 15px */
             color: #666;
             font-weight: 500;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -73,20 +74,44 @@
             font-weight: 600;
         }
 
-        /* --- 日程表样式 --- */
-        /* 修改点：去掉了 font-weight: bold; 改为 normal */
+        /* --- 日程表样式调整 --- */
         
+        /* 修改点：日程标题字号加大到 24px */
         td.title {
             color: #8B3A3A; /* 深红色 */
             font-weight: normal; 
-            font-size: 1.1em; /* 稍微加大一点点字号以保证清晰度，如果觉得太大可删掉这行 */
+            font-size: 24px; /* 增大，但小于主标题的 34px */
+            padding-bottom: 5px; /* 增加一点下间距 */
         }
         
         td.title-special {
             color: #4682B4; /* 钢蓝色 */
             font-weight: normal;
-            font-size: 1.1em;
+            font-size: 24px; /* 增大 */
+            padding-bottom: 5px;
         }
+
+        /* 修改点：摘要内容字号加大到 18px */
+        td.abstract {
+            font-size: 18px; /* 增大，但小于日程标题的 24px */
+            line-height: 1.6; /* 增加行高，阅读更舒适 */
+            color: #444;
+        }
+
+        /* 演讲者名字稍微也配合调整一下，保持协调 */
+        td.speaker {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            padding-bottom: 5px;
+        }
+        
+        /* 时间列字号也稍微跟上，保持平衡 */
+        td.date {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
     </style>
 </head>
 
@@ -104,7 +129,7 @@
         
         <div class="meta-info">
             <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou
+            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
         </div>
     </div>
 
