@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href=".">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <meta name="description" content="Invited Speakers - ISIT Workshop 2026">
+    <title>Invited Speakers - Universality and Dynamics Workshop</title>
+
+    <style>
+        /* --- 继承自 index.html 的全局样式 --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px; 
+            overflow: hidden;
+            line-height: 0;
+            border-bottom: 5px solid #eee;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+            display: block;
+        }
+
+        .header-info {
+            padding: 30px 0;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .header-info .main-title {
+            font-family: Georgia, "Times New Roman", Times, serif; 
+            font-size: 34px; 
+            font-weight: bold; 
+            line-height: 1.3;
+        }
+
+        .header-info .meta-info {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .header-info i {
+            color: #555;
+            margin-right: 5px;
+            width: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Georgia, "Times New Roman", Times, serif !important; 
+            color: #8B3A3A !important; 
+            font-weight: normal;
+            font-size: 2.2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h2 i {
+            margin-right: 12px;
+            font-size: 0.9em;
+        }
+
+        /* 导航栏样式 (需保持与 index 一致) */
+        table.navigation {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+        td.navigation {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        td.navigation a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+        td.navigation a:hover, td.navigation a.current {
+            color: #8B3A3A;
+        }
+
+        /* --- Invited Speakers 专用样式 (新增) --- */
+        .speaker-section {
+            margin-bottom: 60px;
+            max-width: 1200px;
+            /* 如果页面居中可以取消注释下面这行 */
+            /* margin: 0 auto; */ 
+        }
+        
+        /* 顶部说明文字 */
+        .speaker-note {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+            border-left: 4px solid #8B3A3A;
+            padding-left: 15px;
+        }
+
+        /* Speaker 卡片容器 */
+        .speaker-card {
+            display: flex; /* 启用 Flex 布局 */
+            flex-direction: row;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            gap: 40px; /* 左右栏间距 */
+        }
+        
+        .speaker-card:last-child {
+            border-bottom: none;
+        }
+
+        /* 左侧栏：照片 + 名字 + 机构 */
+        .speaker-left {
+            flex: 0 0 250px; /* 固定宽度 250px */
+            text-align: center;
+        }
+
+        .speaker-photo {
+            width: 220px;
+            height: 220px; /* 正方形照片 */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        .speaker-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .speaker-inst {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* 右侧栏：Bio 简介 */
+        .speaker-right {
+            flex: 1; /* 自动填充剩余宽度 */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .speaker-bio {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify; /* 两端对齐，看起来更正式 */
+            margin: 0;
+        }
+        
+        .speaker-bio strong {
+            color: #8B3A3A; /* Bio 标签颜色 */
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .speaker-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .speaker-left {
+                margin-bottom: 20px;
+                flex: none;
+                width: 100%;
+            }
+            .speaker-right {
+                width: 100%;
+            }
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
+    </div>
+
+    <div class="header-info">
+        <div class="main-title">
+            <span style="color: #8B3A3A;">Universality and Dynamics</span><br>
+            <span style="color: #4682B4;">in High-Dimensional Learning and Inference</span>
+        </div>
+        
+        <div class="meta-info">
+            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Home Page" href="index.html">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Program" href="program.html">Program</a> 
+            </td>
+            <td class="navigation">
+                <a class="current" title="Invited Speakers" href="speakers.html">Invited Speakers</a>
+            </td>
+        </tr>
+    </table>
+
+    <h2><i class="fas fa-microphone-lines"></i>Invited Speakers</h2>
+    
+    <p class="speaker-note">
+        The speakers are listed in the order of their presentation.
+    </p>
+
+    <div class="speaker-section">
+        
+        <div class="speaker-card">
+            <div class="speaker-left">
+                <img src="assets/speaker_placeholder.png" alt="Speaker Name" class="speaker-photo">
+                <div class="speaker-name">Speaker Name</div>
+                <div class="speaker-inst">
+                    Department of Electrical Engineering<br>
+                    Stanford University
+                </div>
+            </div>
+
+            <div class="speaker-right">
+                <p class="speaker-bio">
+                    <strong>Biography:</strong><br>
+                    This is a placeholder for the speaker's biography. 
+                    High-dimensional statistics deals with data where the dimension is comparable to or larger than the sample size. 
+                    The speaker has made significant contributions to the understanding of phase transitions in these regimes. 
+                    <br><br>
+                    Their research focuses on the intersection of information theory and statistical physics, providing sharp asymptotic characterizations of learning algorithms.
+                    (You can add more text here. The layout ensures the right side is wider and expands to fill the space, while the left side remains a fixed column.)
+                </p>
+            </div>
+        </div>
+        </div>
+    
+    <footer>
+        &copy; Universality and Dynamics Workshop 2026
+    </footer>
+
+</body>
+</html>
