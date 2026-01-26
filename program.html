@@ -5,6 +5,7 @@
     <base href=".">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=default">
     </script>
@@ -12,6 +13,11 @@
     <title>Program - Universality and Dynamics</title>
 
     <style>
+        /* 设置全局字体，接近图片中的现代无衬线风格 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
         .banner {
             width: 100%;
             overflow: hidden;
@@ -23,37 +29,50 @@
             height: auto;
             display: block;
         }
+        
+        /* 头部信息样式调整 */
         .header-info {
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: left;
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
         }
         .header-info .main-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #333;
-            line-height: 1.2;
+            font-size: 36px; /* 类似图2的大字号 */
+            font-weight: 700; /* 加粗 */
+            color: #2c3e50;   /* 深灰/黑色 */
+            line-height: 1.1;
+            letter-spacing: -0.5px;
         }
         .header-info .sub-title {
-            font-size: 24px;
-            color: #555;
-            margin-top: 5px;
+            font-size: 26px; /* 稍小 */
+            font-weight: 400; /* 正常粗细，类似图3 */
+            color: #34495e;   /* 稍浅的深灰色 */
+            margin-top: 8px;
             display: block;
         }
         .header-info .meta-info {
             margin-top: 15px;
-            font-size: 16px;
+            font-size: 15px; /* 字号调小 */
             color: #666;
-            font-weight: bold;
+            font-weight: 500;
         }
-        /* 增加 Session 标题样式 */
+        /* 图标样式 */
+        .header-info i {
+            color: #555;
+            margin-right: 5px;
+            width: 15px;
+            text-align: center;
+        }
+
+        /* Session 标题样式 */
         h3.session-header {
             margin-top: 40px;
             margin-bottom: 20px;
             color: #333;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -68,7 +87,8 @@
         <span class="main-title">Universality and Dynamics</span><br>
         <span class="sub-title">in High-Dimensional Learning and Inference</span>
         <div class="meta-info">
-            ISIT Workshop 2026 &nbsp;|&nbsp; Location: TBD
+            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
         </div>
     </div>
 
@@ -220,7 +240,7 @@
         </tr>
         <tr>
             <td class="abstract">
-                
+                 
             </td>
         </tr>
     </table>
