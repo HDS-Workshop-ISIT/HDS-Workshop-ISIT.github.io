@@ -13,9 +13,11 @@
     <title>Program - Universality and Dynamics</title>
 
     <style>
-        /* 设置全局字体，接近图片中的现代无衬线风格 */
+        /* --- 全局默认字体：无衬线 (Sans-serif) --- */
+        /* 这适用于正文、表格内容等 */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
         }
 
         .banner {
@@ -30,7 +32,7 @@
             display: block;
         }
         
-        /* 头部信息样式调整 */
+        /* --- 头部信息样式 (Universality and Dynamics) --- */
         .header-info {
             padding: 30px 0;
             text-align: left;
@@ -38,24 +40,30 @@
             margin-bottom: 20px;
         }
         .header-info .main-title {
-            font-size: 36px; /* 类似图2的大字号 */
-            font-weight: 700; /* 加粗 */
-            color: #2c3e50;   /* 深灰/黑色 */
+            /* 对应图2：粗体，无衬线，深色 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 36px;
+            font-weight: 700; 
+            color: #2c3e50;
             line-height: 1.1;
             letter-spacing: -0.5px;
         }
         .header-info .sub-title {
-            font-size: 26px; /* 稍小 */
-            font-weight: 400; /* 正常粗细，类似图3 */
-            color: #34495e;   /* 稍浅的深灰色 */
+            /* 对应图3：无衬线，稍细，深灰 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            color: #34495e;
             margin-top: 8px;
             display: block;
         }
         .header-info .meta-info {
+            /* 底部小字：无衬线 */
             margin-top: 15px;
-            font-size: 15px; /* 字号调小 */
+            font-size: 15px;
             color: #666;
             font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         /* 图标样式 */
         .header-info i {
@@ -65,14 +73,38 @@
             text-align: center;
         }
 
-        /* Session 标题样式 */
+        /* --- 专门针对 "Conference Program" 标题的样式 --- */
+        /* 对应你上传的最后一张图片：衬线字体 (Serif)，深红色 */
+        h2 {
+            font-family: Georgia, "Times New Roman", Times, serif !important; 
+            color: #8B3A3A !important; /* 深红/红褐色 */
+            font-weight: normal;
+            font-size: 2.2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Session 分段标题 */
         h3.session-header {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin-top: 40px;
             margin-bottom: 20px;
             color: #333;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
             font-weight: 600;
+        }
+
+        /* --- 日程表颜色控制 --- */
+        /* 红色：Talks (Keynote, Spotlight, etc.) */
+        td.title {
+            color: #a52a2a; /* Firebrick red */
+            font-weight: bold;
+        }
+        /* 蓝色：Special Events (Opening, Break, Lunch, etc.) */
+        td.title-special {
+            color: #4682B4; /* SteelBlue */
+            font-weight: bold;
         }
     </style>
 </head>
@@ -88,7 +120,7 @@
         <span class="sub-title">in High-Dimensional Learning and Inference</span>
         <div class="meta-info">
             <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
+            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou
         </div>
     </div>
 
