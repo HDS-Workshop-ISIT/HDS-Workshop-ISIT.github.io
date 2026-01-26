@@ -10,45 +10,58 @@
     <title>Universality and Dynamics in High-Dimensional Learning and Inference</title>
 
     <style>
-        /* Banner 样式修改：
-           1. 去掉固定高度，让内容撑开
-           2. 图片宽度 100%，高度自动 (auto)
-        */
+        /* 1. Banner 样式：纯图片展示 */
         .banner {
-            position: relative;
             width: 100%;
             overflow: hidden;
-            line-height: 0; /* 消除图片底部的微小空隙 */
+            line-height: 0;
+            border-bottom: 5px solid #eee; /* 图片和标题之间的分割线 */
         }
         .banner img {
             width: 100%;
-            height: auto;   /* 关键：高度自适应，保证图片不裁剪、不变形 */
+            height: auto;
             display: block;
         }
-        
-        /* 恢复文字的行高，防止被上面的 line-height: 0 影响 */
-        .banner .top-left, .banner .bottom-right {
-            line-height: normal; 
+
+        /* 2. 新的标题区域样式 (分离出来的标题) */
+        .header-info {
+            padding: 20px 0;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .header-info .main-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.2;
+        }
+        .header-info .sub-title {
+            font-size: 24px;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+        }
+        .header-info .meta-info {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #666;
+            font-weight: bold;
         }
 
-        /* 标题文字调整 */
-        .banner .title1 { font-size: 36px; }
-        .banner .title2 { font-size: 28px; display: block; margin-top: 5px;}
-        
-        /* 组织者头像样式 */
+        /* 3. 组织者头像样式修正 */
         .organizer-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #eee;
+            height: 180px;      /* 强制高度统一 */
+            width: auto;        /* 宽度自适应，保持原图比例 */
+            max-width: 100%;    /* 防止过宽撑破表格 */
+            display: block;     
             margin-bottom: 10px;
-            transition: transform 0.2s; /* 添加一个小动画效果 */
+            border: 1px solid #ccc; /* 加个细边框显得更正式 */
+            /* border-radius: 50%;  <-- 已删除圆形代码 */
+            transition: opacity 0.2s;
         }
-        /* 鼠标悬停时头像轻微放大，提示可点击 */
         .organizer-img:hover {
-            transform: scale(1.05);
-            border-color: #ccc;
+            opacity: 0.8; /* 鼠标悬停微效 */
         }
     </style>
 </head>
@@ -57,12 +70,13 @@
 
     <div class="banner">
         <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
-        <div class="top-left">
-            <span class="title1">Universality and Dynamics</span><br>
-            <span class="title2">in High-Dimensional Learning and Inference</span>
-        </div>
-        <div class="bottom-right">
-            ISIT Workshop 202X <br> Location: TBD
+    </div>
+
+    <div class="header-info">
+        <span class="main-title">Universality and Dynamics</span><br>
+        <span class="sub-title">in High-Dimensional Learning and Inference</span>
+        <div class="meta-info">
+            ISIT Workshop 2026 &nbsp;|&nbsp; Location: TBD
         </div>
     </div>
 
@@ -92,8 +106,7 @@
     </p>
 
     <h2>Organizers</h2>
-    <p>
-    </p>
+    <p></p>
     
     <table class="sponsors">
         <tr>
@@ -123,15 +136,16 @@
 
             <td class="sponsor" style="vertical-align: top; width: 25%;">
                 <a href="https://sites.google.com/site/malekiarian/" target="_blank"> 
-                    <img src="assets/org_arian.png" alt="Arian Maleki" class="organizer-img">
+                    <img src="assets/org_arian.jpg" alt="Arian Maleki" class="organizer-img">
                     <br><strong>Arian Maleki</strong>
                     <br><span style="font-size: 0.9em;">Columbia University</span>
                 </a>
             </td>
         </tr>
     </table>
+    
     <footer>
-        &copy; Universality and Dynamics Workshop 202X
+        &copy; Universality and Dynamics Workshop 2026
     </footer>
 
 </body>
