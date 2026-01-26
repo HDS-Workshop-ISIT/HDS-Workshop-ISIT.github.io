@@ -45,28 +45,26 @@
         }
 
         /* --- 核心修改区域 Start --- */
-        /* 组织者头像样式 */
         .organizer-img {
-            /* 设定相框大小 */
             height: 180px;
             width: 160px; 
             
-            /* 保持原比例，完整显示 */
             object-fit: contain; 
             object-position: center; 
             
             display: block;     
             margin-bottom: 10px;
             
-            /* 【修改点：统一白色背景框】 */
-            background-color: #fff; /* 1. 设置背景为纯白 */
-            border: 1px solid #ddd; /* 2. 保留浅灰色边框线，勾勒轮廓 */
-            padding: 5px;           /* 3. 【关键】增加内边距。这会强迫图片四周留白，确保第4张图也有白框 */
+            background-color: #fff; 
+            border: 1px solid #ddd; 
+            
+            /* 【修改点】：将 padding 从 5px 增加到 15px */
+            /* 作用：强制增加白边宽度。即便是宽照片，左右也必须留出 15px 的白色空隙 */
+            padding: 15px;           
             
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
             transition: opacity 0.2s;
             
-            /* 居中 */
             margin-left: auto;
             margin-right: auto;
         }
