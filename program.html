@@ -18,20 +18,22 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
-        /* Banner 图片样式 */
-        .banner {
-            width: 100%;
-            height: 400px;
-            overflow: hidden;
-            line-height: 0;
-            border-bottom: 5px solid #eee;
-        }
-        .banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
+/* Banner 图片样式 */
+.banner {
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    line-height: 0;
+    border-bottom: 5px solid #eee;
+}
+.banner img {
+    width: 100%;
+    height: 100%;           /* 改为 100% */
+    object-fit: cover;      /* 添加这行 */
+    object-position: center; /* 添加这行 */
+    display: block;
+}
+
         /* --- 头部信息样式 --- */
         .header-info {
             padding: 30px 0;
