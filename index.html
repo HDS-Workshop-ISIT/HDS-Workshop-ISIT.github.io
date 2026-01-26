@@ -17,16 +17,23 @@
             color: #333;
         }
 
-        /* Banner 图片样式 */
+        /* Banner 图片样式 - 核心修改区域 */
         .banner {
             width: 100%;
+            /* [修改点] 设置固定高度，让它变矮，形成横幅效果 */
+            height: 300px; 
             overflow: hidden;
             line-height: 0;
             border-bottom: 5px solid #eee;
         }
         .banner img {
             width: 100%;
-            height: auto;
+            /* [修改点] 强制填满容器高度 */
+            height: 100%; 
+            /* [修改点] 保持比例裁剪，不会变形 */
+            object-fit: cover; 
+            /* [修改点] 图片居中显示，这样能截取到最精彩的部分 */
+            object-position: center; 
             display: block;
         }
 
@@ -79,7 +86,7 @@
             color: #444;
         }
 
-        /* --- Organizers 样式核心修改区域 Start --- */
+        /* --- Organizers 样式 --- */
         
         /* 表格整体设置：强制等宽 */
         .sponsors {
@@ -115,7 +122,7 @@
             padding: 0;            
             box-shadow: none; 
             
-            /* 增加一点圆角，看起来更现代 (可选) */
+            /* 增加一点圆角 */
             border-radius: 8px;
             
             transition: transform 0.2s, opacity 0.2s;
@@ -143,7 +150,6 @@
             font-size: 16px; /* 学校字号 */
             color: #666;
         }
-        /* --- Organizers 样式核心修改区域 End --- */
 
     </style>
 </head>
