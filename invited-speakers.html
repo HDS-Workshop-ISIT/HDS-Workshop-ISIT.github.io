@@ -106,30 +106,19 @@
     box-sizing: border-box;
 }
 
-/* --- Speaker 序号标题 --- */
-.speaker-number {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 1.8em;
-    color: #8B3A3A;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e0;
-}
-
 /* --- Speaker 容器样式 --- */
 .speaker-container {
     display: flex;
     margin-bottom: 50px;
     gap: 30px;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
 }
 
 /* 左侧信息区 (窄) */
 .speaker-left {
-    flex: 0 0 240px;
+    flex-shrink: 0;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,22 +146,24 @@
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 8px;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .speaker-affiliation {
     font-size: 17px;
     color: #666;
     line-height: 1.4;
+    word-wrap: break-word;
+    width: 100%;
 }
 
-/* 右侧简介区 (宽) */
+/* 右侧简介区 (宽) - 关键修改 */
 .speaker-right {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-width: 0;
-    max-width: 100%;
+    min-width: 0;  /* 这个很重要，允许 flex item 缩小到内容以下 */
+    overflow: hidden;  /* 防止溢出 */
+    box-sizing: border-box;
 }
 
 /* Biography 小标题 */
@@ -191,7 +182,7 @@
     font-size: 0.9em;
 }
 
-/* Biography 内容框 */
+/* Biography 内容框 - 关键修改 */
 .speaker-bio {
     font-size: 16px;
     line-height: 1.7;
@@ -202,14 +193,19 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
     box-sizing: border-box;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;  /* 强制长单词断行 */
+    hyphens: auto;  /* 自动连字符 */
 }
 
 .speaker-bio p {
     margin-bottom: 15px;
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .speaker-bio p:last-child {
