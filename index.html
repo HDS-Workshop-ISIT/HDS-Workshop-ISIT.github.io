@@ -47,17 +47,27 @@
         /* --- 核心修改区域 Start --- */
         /* 组织者头像样式 */
         .organizer-img {
-            height: 180px;      /* 锁定高度 */
-            width: 150px;       /* 【新增】锁定宽度，确保排版整齐 */
-            object-fit: cover;  /* 【核心修改】关键属性：保持图片原始比例，多余部分自动裁剪，绝不压扁 */
-            object-position: top center; /* 【可选】优先展示图片顶部（防止切掉头顶，通常用于半身照） */
+            /* 设定一个统一的相框大小 */
+            height: 180px;
+            width: 160px; /* 稍微设置宽一点，适应横向照片 */
+            
+            /* 【核心修改】关键属性：contain */
+            /* 含义：保持原图比例，将完整图片放入这个框中。绝不裁剪。 */
+            /* 如果比例不合，会在四周留白。 */
+            object-fit: contain; 
+            object-position: center; /* 图片在框中居中显示 */
             
             display: block;     
             margin-bottom: 10px;
-            border: 1px solid #ccc; 
+            border: 1px solid #ddd; 
+            /* 增加一个浅灰背景色，这样留白区域看起来是相框的一部分，更整洁 */
+            background-color: #f4f4f4; 
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
             transition: opacity 0.2s;
-            background-color: #f0f0f0; /* 图片加载失败时的占位色 */
+            
+            /* 确保图片在自己的容器里水平居中 */
+            margin-left: auto;
+            margin-right: auto;
         }
         /* --- 核心修改区域 End --- */
 
@@ -67,9 +77,19 @@
 
         /* 表格样式调整 */
         .sponsors td {
-            padding-right: 30px; 
+            /* 为了配合 contain 的留白效果，建议将单元格内容居中对齐 */
+            text-align: center; 
+            vertical-align: top;
             padding-bottom: 20px;
-            text-align: left; 
+            /* 去掉了之前的 padding-right，改用居中对齐来控制间距 */
+            padding-left: 10px; 
+            padding-right: 10px;
+        }
+        /* 调整名字和机构的对齐方式 */
+        .sponsor a {
+            text-decoration: none; /* 去掉链接下划线，看起来更干净 */
+            color: #333;
+            display: block; /* 让链接占满整个单元格宽度，便于居中 */
         }
     </style>
 </head>
@@ -116,37 +136,37 @@
     <h2>Organizers</h2>
     <p></p>
     
-    <table class="sponsors" style="width: 100%;">
+    <table class="sponsors" style="margin: 0 auto;"> 
         <tr>
-            <td class="sponsor" style="vertical-align: top;">
+            <td class="sponsor">
                 <a href="https://www.columbia.edu/~rd2714/" target="_blank"> 
                     <img src="assets/org_rishabh.png" alt="Rishabh Dudeja" class="organizer-img">
-                    <br><strong>Rishabh Dudeja</strong>
-                    <br><span style="font-size: 0.9em;">UW Madison</span>
+                    <strong>Rishabh Dudeja</strong>
+                    <br><span style="font-size: 0.9em; color: #666;">UW Madison</span>
                 </a>
             </td>
             
-            <td class="sponsor" style="vertical-align: top;">
+            <td class="sponsor">
                 <a href="https://zhenyu-liao.github.io/" target="_blank"> 
                     <img src="assets/org_zhenyu.png" alt="Zhenyu Liao" class="organizer-img">
-                    <br><strong>Zhenyu Liao</strong>
-                    <br><span style="font-size: 0.9em;">HUST</span>
+                    <strong>Zhenyu Liao</strong>
+                    <br><span style="font-size: 0.9em; color: #666;">HUST</span>
                 </a>
             </td>
 
-            <td class="sponsor" style="vertical-align: top;">
+            <td class="sponsor">
                 <a href="https://lsec.cc.ac.cn/~mjj/" target="_blank"> 
                     <img src="assets/org_junjie.png" alt="Junjie Ma" class="organizer-img">
-                    <br><strong>Junjie Ma</strong>
-                    <br><span style="font-size: 0.9em;">CAS</span>
+                    <strong>Junjie Ma</strong>
+                    <br><span style="font-size: 0.9em; color: #666;">CAS</span>
                 </a>
             </td>
 
-            <td class="sponsor" style="vertical-align: top;">
+            <td class="sponsor">
                 <a href="https://sites.google.com/site/malekiarian/" target="_blank"> 
                     <img src="assets/org_arian.jpg" alt="Arian Maleki" class="organizer-img">
-                    <br><strong>Arian Maleki</strong>
-                    <br><span style="font-size: 0.9em;">Columbia University</span>
+                    <strong>Arian Maleki</strong>
+                    <br><span style="font-size: 0.9em; color: #666;">Columbia University</span>
                 </a>
             </td>
         </tr>
