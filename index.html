@@ -3,104 +3,119 @@
 
 <head>
     <base href=".">
-    <!-- 确保你的 assets 文件夹里有 favicon.png 和 main.css，否则页面会没有样式 -->
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
     
-    <!-- 修改网页标题 -->
-    <meta name="description" content="Workshop Name 202X">
-    <title>HDS-Workshop-ISIT 2026</title>
+    <meta name="description" content="Universality and Dynamics in High-Dimensional Learning and Inference">
+    <title>Universality and Dynamics in High-Dimensional Learning and Inference</title>
+
+    <style>
+        /* Banner 图片样式 */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px; 
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        /* 组织者头像强制统一大小样式 */
+        .organizer-img {
+            width: 150px;       /* 强制宽度 */
+            height: 150px;      /* 强制高度 */
+            object-fit: cover;  /* 关键：自动裁切，不变形 */
+            border-radius: 50%; /* 变成圆形，如果想要方形请删除这一行 */
+            border: 3px solid #eee;
+            margin-bottom: 10px;
+        }
+        
+        /* 调整标题字号，因为标题比较长 */
+        .banner .title1 { font-size: 36px; }
+        .banner .title2 { font-size: 28px; display: block; margin-top: 5px;}
+    </style>
 </head>
 
 <body>
 
-    <!-- 顶部 Banner 区域 -->
     <div class="banner">
-        <!-- 记得替换 assets/banner.jpg 为你的会议 Banner 图片 -->
-        <img src="assets/Guangzhou.jpg" alt="Workshop Banner" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
         <div class="top-left">
-            <!-- 这里修改会议名称 -->
-            <span class="title1">My Workshop</span><span class="title2">Name</span> <span class="year">2026</span>
+            <span class="title1">Universality and Dynamics</span><br>
+            <span class="title2">in High-Dimensional Learning and Inference</span>
         </div>
         <div class="bottom-right">
-            <!-- 这里修改时间和地点 -->
-            Date: TBD <br> Location: Guangzhou, China
+            ISIT Workshop 202X <br> Location: TBD
         </div>
     </div>
 
-    
-
-    <!-- 导航栏区域 (已修改为你需要的四个板块) -->
     <table class="navigation">
         <tr>
-            <!-- 1. Home (当前页面) -->
             <td class="navigation">
                 <a class="current" title="Home Page" href="index.html">Home</a>
             </td>
-            
-            <!-- 2. Call for Papers (暂时先占位) -->
-            <!-- 等你准备好这页内容后，新建一个 call-for-papers.html 文件 -->
             <td class="navigation">
                 <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
             </td>
-            
-            <!-- 3. Program (暂时先占位) -->
             <td class="navigation">
                 <a title="Workshop Program" href="program.html">Program</a> 
             </td>
-            
-            <!-- 4. Schedule (暂时先占位) -->
             <td class="navigation">
                 <a title="Schedule" href="schedule.html">Schedule</a>
             </td>
         </tr>
     </table>
 
-    <!-- ================= HOME 页面内容开始 ================= -->
-
-    <!-- 第一部分：About (对应你的 Home 里的 About 要求) -->
     <h2>About the Workshop</h2>
     <p>
-        This is a placeholder text for your workshop introduction. 
-        You can describe the motivation, the topics, and the goals of this workshop here.
+        <strong>High-dimensional learning and inference</strong> have recently seen a string of rigorous results showing that both learning performance and dynamics obey universal mean-field laws. 
+    </p>
+    <p>
+        This workshop aims to bring together researchers from information theory, machine learning (ML), high-dimensional statistics, random matrix theory, and statistical physics, to develop a unified view of these advances. Topics include dynamical mean-field limits for learning algorithms, universality and Gaussian equivalence in and beyond generalized linear models, universality of iterative algorithms such as AMP, and information-theoretic questions motivated by these asymptotic laws.
     </p>
 
-    <!-- 第二部分：Organizers (对应你的 Home 里的 Organizer 要求) -->
     <h2>Organizers</h2>
     <p>
-        Here you can list the organizing committee members.
+        
     </p>
     
-    <!-- 组织者列表：这里保留了原模板的图片结构，你可以把 kitten 图片换成教授/组织者的照片 -->
     <table class="sponsors">
         <tr>
-            <td class="sponsor">
-                <!-- 组织者 1 -->
-                <a href="#">
-                    <img src="assets/kitten1.jpg" alt="Organizer 1 Name">
-                    <br>Organizer Name 1
+            <td class="sponsor" style="vertical-align: top; width: 25%;">
+                <a href=""> <img src="assets/org_rishabh.jpg" alt="Rishabh Dudeja" class="organizer-img">
+                    <br><strong>Rishabh Dudeja</strong>
+                    <br><span style="font-size: 0.9em;">UW Madison</span>
                 </a>
             </td>
-            <td class="sponsor">
-                <!-- 组织者 2 -->
-                <a href="#">
-                    <img src="assets/kitten2.jpg" alt="Organizer 2 Name" style="width: 80%">
-                    <br>Organizer Name 2
+            
+            <td class="sponsor" style="vertical-align: top; width: 25%;">
+                <a href=""> <img src="assets/org_zhenyu.jpg" alt="Zhenyu Liao" class="organizer-img">
+                    <br><strong>Zhenyu Liao</strong>
+                    <br><span style="font-size: 0.9em;">HUST</span>
                 </a>
             </td>
-            <td class="sponsor">
-                <!-- 组织者 3 -->
-                <a href="#">
-                    <img src="assets/kitten3.jpg" alt="Organizer 3 Name">
-                    <br>Organizer Name 3
+
+            <td class="sponsor" style="vertical-align: top; width: 25%;">
+                <a href=""> <img src="assets/org_junjie.jpg" alt="Junjie Ma" class="organizer-img">
+                    <br><strong>Junjie Ma</strong>
+                    <br><span style="font-size: 0.9em;">CAS</span>
+                </a>
+            </td>
+
+            <td class="sponsor" style="vertical-align: top; width: 25%;">
+                <a href=""> <img src="assets/org_arian.jpg" alt="Arian Maleki" class="organizer-img">
+                    <br><strong>Arian Maleki</strong>
+                    <br><span style="font-size: 0.9em;">Columbia University</span>
                 </a>
             </td>
         </tr>
     </table>
-    <!-- ================= HOME 页面内容结束 ================= -->
-
     <footer>
-        &copy; Workshop Organizers 202X
+        &copy; Universality and Dynamics Workshop 202X
     </footer>
 
 </body>
