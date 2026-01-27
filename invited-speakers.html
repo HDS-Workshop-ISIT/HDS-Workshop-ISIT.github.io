@@ -105,8 +105,8 @@
             box-sizing: border-box;
         }
 
-        /* --- Speaker number title --- */
-        .speaker-number {
+        /* --- Speaker name title (replaces speaker-number) --- */
+        .speaker-name-title {
             font-family: Georgia, "Times New Roman", Times, serif;
             font-size: 2.6em;
             color: #8B3A3A;
@@ -116,6 +116,17 @@
             padding: 15px 0;
             border-bottom: 3px solid #8B3A3A;
             text-align: left;
+        }
+
+        .speaker-name-title a {
+            color: #8B3A3A;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .speaker-name-title a:hover {
+            color: #4682B4;
+            text-decoration: underline;
         }
 
         /* --- Speaker container style --- */
@@ -157,6 +168,15 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
+        .photo-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .speaker-photo {
             max-width: 100%;
             max-height: 100%;
@@ -164,26 +184,6 @@
             height: auto;
             object-fit: contain;
             display: block;
-        }
-
-        .speaker-name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 8px;
-            word-wrap: break-word;
-            width: 100%;
-        }
-
-        .speaker-name a {
-            color: #2c3e50;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .speaker-name a:hover {
-            color: #8B3A3A;
-            text-decoration: underline;
         }
 
         .speaker-affiliation {
@@ -295,14 +295,15 @@
     <div class="speakers-wrapper">
         
         <!-- Speaker 1: Zhou Fan -->
-        <div class="speaker-number">Speaker 1</div>
+        <div class="speaker-name-title">
+            <a href="http://www.stat.yale.edu/~zf59/" target="_blank">Zhou Fan</a>
+        </div>
         <div class="speaker-container">
             <div class="speaker-left">
                 <div class="photo-container">
-                    <img src="assets/fan.jpg" alt="Zhou Fan" class="speaker-photo">
-                </div>
-                <div class="speaker-name">
-                    <a href="http://www.stat.yale.edu/~zf59/" target="_blank">Zhou Fan</a>
+                    <a href="http://www.stat.yale.edu/~zf59/" target="_blank" class="photo-link">
+                        <img src="assets/fan.jpg" alt="Zhou Fan" class="speaker-photo">
+                    </a>
                 </div>
                 <div class="speaker-affiliation">Yale University</div>
             </div>
@@ -320,14 +321,15 @@
         </div>
 
         <!-- Speaker 2: Qiyang Han -->
-        <div class="speaker-number">Speaker 2</div>
+        <div class="speaker-name-title">
+            <a href="https://statweb.rutgers.edu/qh85/" target="_blank">Qiyang Han</a>
+        </div>
         <div class="speaker-container">
             <div class="speaker-left">
                 <div class="photo-container">
-                    <img src="assets/han.jpg" alt="Qiyang Han" class="speaker-photo">
-                </div>
-                <div class="speaker-name">
-                    <a href="https://statweb.rutgers.edu/qh85/" target="_blank">Qiyang Han</a>
+                    <a href="https://statweb.rutgers.edu/qh85/" target="_blank" class="photo-link">
+                        <img src="assets/han.jpg" alt="Qiyang Han" class="speaker-photo">
+                    </a>
                 </div>
                 <div class="speaker-affiliation">Rutgers University</div>
             </div>
@@ -345,14 +347,15 @@
         </div>
 
         <!-- Speaker 3: Bruno Loureiro -->
-        <div class="speaker-number">Speaker 3</div>
+        <div class="speaker-name-title">
+            <a href="https://brloureiro.github.io/" target="_blank">Bruno Loureiro</a>
+        </div>
         <div class="speaker-container">
             <div class="speaker-left">
                 <div class="photo-container">
-                    <img src="assets/loureiro.jpg" alt="Bruno Loureiro" class="speaker-photo">
-                </div>
-                <div class="speaker-name">
-                    <a href="https://brloureiro.github.io/" target="_blank">Bruno Loureiro</a>
+                    <a href="https://brloureiro.github.io/" target="_blank" class="photo-link">
+                        <img src="assets/loureiro.jpg" alt="Bruno Loureiro" class="speaker-photo">
+                    </a>
                 </div>
                 <div class="speaker-affiliation">CNRS, École Normale Supérieure</div>
             </div>
@@ -370,14 +373,15 @@
         </div>
 
         <!-- Speaker 4: Dirk Slock -->
-        <div class="speaker-number">Speaker 4</div>
+        <div class="speaker-name-title">
+            <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank">Dirk T. M. Slock</a>
+        </div>
         <div class="speaker-container">
             <div class="speaker-left">
                 <div class="photo-container">
-                    <img src="assets/slock.jpg" alt="Dirk Slock" class="speaker-photo">
-                </div>
-                <div class="speaker-name">
-                    <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank">Dirk T. M. Slock</a>
+                    <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank" class="photo-link">
+                        <img src="assets/slock.jpg" alt="Dirk Slock" class="speaker-photo">
+                    </a>
                 </div>
                 <div class="speaker-affiliation">EURECOM</div>
             </div>
