@@ -11,13 +11,13 @@
     <title>Plenary Invited Speakers - Universality and Dynamics Workshop</title>
 
     <style>
-        /* --- 全局默认字体：无衬线 (Sans-serif) --- */
+        /* --- Global default font: Sans-serif --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
 
-        /* Banner 图片样式 */
+        /* Banner image style */
         .banner {
             width: 100%;
             height: 400px; 
@@ -33,7 +33,7 @@
             display: block;
         }
 
-        /* --- 头部信息样式 --- */
+        /* --- Header info style --- */
         .header-info {
             padding: 30px 0;
             text-align: left;
@@ -63,7 +63,7 @@
             text-align: center;
         }
 
-        /* --- 页面内标题样式 (红色 Serif) --- */
+        /* --- Page title style (Red Serif) --- */
         h2 {
             font-family: Georgia, "Times New Roman", Times, serif !important; 
             color: #8B3A3A !important; 
@@ -73,20 +73,20 @@
             margin-bottom: 20px;
         }
         
-        /* 标题内的图标样式：增加右侧间距 */
+        /* Icon style in titles: add right spacing */
         h2 i {
             margin-right: 12px;
             font-size: 0.9em;
         }
 
-        /* 正文段落 */
+        /* Body paragraphs */
         p {
             font-size: 18px;
             line-height: 1.6;
             color: #444;
         }
 
-        /* --- 说明文字样式 --- */
+        /* --- Note text style --- */
         .note {
             font-size: 17px;
             color: #666;
@@ -97,133 +97,159 @@
             border-left: 4px solid #8B3A3A;
         }
 
-        /* --- Speaker 整体容器，确保不超出导航栏宽度 --- */
-/* --- Speaker 整体容器，确保不超出导航栏宽度 --- */
-.speakers-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+        /* --- Speaker wrapper container --- */
+        .speakers-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
-/* --- Speaker 序号标题 (居中显示，更突出) --- */
-.speaker-number {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 2.6em;  /* 更大的字体 */
-    color: #8B3A3A;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    padding: 15px 0;
-    border-bottom: 3px solid #8B3A3A;  /* 更粗的红色底线 */
-    text-align: left;  /* 或改为 center 居中显示 */
-}
+        /* --- Speaker number title --- */
+        .speaker-number {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 2.6em;
+            color: #8B3A3A;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            padding: 15px 0;
+            border-bottom: 3px solid #8B3A3A;
+            text-align: left;
+        }
 
-/* --- Speaker 容器样式 --- */
-.speaker-container {
-    display: flex;
-    margin-bottom: 50px;
-    gap: 30px;
-    width: 100%;
-    box-sizing: border-box;
-}
+        /* --- Speaker container style --- */
+        .speaker-container {
+            display: flex;
+            margin-bottom: 50px;
+            gap: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-/* 左侧信息区 (窄) */
-.speaker-left {
-    flex-shrink: 0;
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+        /* Left info area (narrow) */
+        .speaker-left {
+            flex-shrink: 0;
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-.speaker-photo {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        /* Photo container with fixed size */
+        .photo-container {
+            width: 200px;
+            height: 250px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
 
-.speaker-photo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
+        .photo-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
 
-.speaker-name {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    word-wrap: break-word;
-    width: 100%;
-}
+        .speaker-photo {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            ;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
 
-.speaker-affiliation {
-    font-size: 17px;
-    color: #666;
-    line-height: 1.4;
-    word-wrap: break-word;
-    width: 100%;
-}
+        .speaker-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            word-wrap: break-word;
+            width: 100%;
+        }
 
-/* 右侧简介区 (宽) - 关键修改 */
-.speaker-right {
-    flex: 1;
-    min-width: 0;  /* 这个很重要，允许 flex item 缩小到内容以下 */
-    overflow: hidden;  /* 防止溢出 */
-    box-sizing: border-box;
-}
+        .speaker-name a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-/* Biography 小标题 */
-.bio-title {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 1.4em;
-    color: #4682B4;
-    font-weight: bold;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
+        .speaker-name a:hover {
+            color: #8B3A3A;
+            text-decoration: underline;
+        }
 
-.bio-title i {
-    margin-right: 10px;
-    font-size: 0.9em;
-}
+        .speaker-affiliation {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.4;
+            word-wrap: break-word;
+            width: 100%;
+        }
 
-/* Biography 内容框 - 关键修改 */
-.speaker-bio {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #444;
-    text-align: justify;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    box-sizing: border-box;
-    width: 100%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;  /* 强制长单词断行 */
-    hyphens: auto;  /* 自动连字符 */
-}
+        /* Right bio area (wide) */
+        .speaker-right {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
 
-.speaker-bio p {
-    margin-bottom: 15px;
-    margin-top: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
+        /* Biography subtitle */
+        .bio-title {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.4em;
+            color: #4682B4;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
 
-.speaker-bio p:last-child {
-    margin-bottom: 0;
-}
+        .bio-title i {
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Biography content box */
+        .speaker-bio {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+            width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+        }
+
+        .speaker-bio p {
+            margin-bottom: 15px;
+            margin-top: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .speaker-bio p:last-child {
+            margin-bottom: 0;
+        }
 
     </style>
 </head>
@@ -266,18 +292,22 @@
     <h2><i class="fas fa-microphone"></i>Plenary Invited Speakers</h2>
     
     <div class="note">
-        <i class="fas fa-info-circle"></i> The speakers are listed in the order of their presentations.
+        <i class="fas fa-info-circle"></i> The speakers are listed in alphabetical order by last name.
     </div>
 
     <div class="speakers-wrapper">
         
-        <!-- Speaker 1 -->
+        <!-- Speaker 1: Qiyang Han -->
         <div class="speaker-number">Speaker 1</div>
         <div class="speaker-container">
             <div class="speaker-left">
-                <img src="assets/kitten4.jpg" alt="Speaker 1" class="speaker-photo">
-                <div class="speaker-name">Speaker Name</div>
-                <div class="speaker-affiliation">University/Institution Name</div>
+                <div class="photo-container">
+                    <img src="assets/han.jpg" alt="Qiyang Han" class="speaker-photo">
+                </div>
+                <div class="speaker-name">
+                    <a href="https://statweb.rutgers.edu/qh85/" target="_blank">Qiyang Han</a>
+                </div>
+                <div class="speaker-affiliation">Rutgers University</div>
             </div>
             
             <div class="speaker-right">
@@ -286,24 +316,23 @@
                 </div>
                 <div class="speaker-bio">
                     <p>
-                        This is where the speaker's biography and research interests will be displayed.
-                    </p>
-                    <p>
-                        Additional information about their contributions to the field, notable publications, 
-                        awards, and their relevance to the workshop theme will be displayed here.
+                        Qiyang Han is an Associate Professor of Statistics at Rutgers University. He completed his Ph.D. in 2018 from the University of Washington under the supervision of Professor Jon A. Wellner. His research focuses on the theoretical interface of statistics, algorithms, and probability, with major themes including empirical process theory, constrained nonparametric inference, mean-field high-dimensional statistics, and large random iterative algorithms.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- Speaker 2 模板 (可以继续添加) -->
-        <!--
+        <!-- Speaker 2: Bruno Loureiro -->
         <div class="speaker-number">Speaker 2</div>
         <div class="speaker-container">
             <div class="speaker-left">
-                <img src="assets/speaker2.jpg" alt="Speaker 2" class="speaker-photo">
-                <div class="speaker-name">Speaker 2 Name</div>
-                <div class="speaker-affiliation">University/Institution Name</div>
+                <div class="photo-container">
+                    <img src="assets/loureiro.jpg" alt="Bruno Loureiro" class="speaker-photo">
+                </div>
+                <div class="speaker-name">
+                    <a href="https://brloureiro.github.io/" target="_blank">Bruno Loureiro</a>
+                </div>
+                <div class="speaker-affiliation">CNRS, École Normale Supérieure</div>
             </div>
             
             <div class="speaker-right">
@@ -311,11 +340,65 @@
                     <i class="fas fa-user-circle"></i>Biography
                 </div>
                 <div class="speaker-bio">
-                    <p>Speaker 2's biography...</p>
+                    <p>
+                        Bruno Loureiro is a CNRS researcher in the DATA team at the Centre for Data Science, École Normale Supérieure in Paris. His work lies at the intersection of machine learning and statistical mechanics. He also serves as a Professeur Attaché at Université Paris Sciences et Lettres (PSL), where he teaches in both undergraduate and graduate programs across its affiliated institutions.
+                    </p>
                 </div>
             </div>
         </div>
-        -->
+
+        <!-- Speaker 3: Dirk Slock -->
+        <div class="speaker-number">Speaker 3</div>
+        <div class="speaker-container">
+            <div class="speaker-left">
+                <div class="photo-container">
+                    <img src="assets/slock.jpg" alt="Dirk Slock" class="speaker-photo">
+                </div>
+                <div class="speaker-name">
+                    <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank">Dirk T. M. Slock</a>
+                </div>
+                <div class="speaker-affiliation">EURECOM</div>
+            </div>
+            
+            <div class="speaker-right">
+                <div class="bio-title">
+                    <i class="fas fa-user-circle"></i>Biography
+                </div>
+                <div class="speaker-bio">
+                    <p>
+                        Dirk T. M. Slock (Life Fellow, IEEE) is a Professor at EURECOM, where he has been since 1991. He received his Ph.D. in Electrical Engineering from Stanford University in 1989. His research interests include statistical signal processing for wireless communications and audio processing. He has made significant contributions to mobile communications, including innovations adopted in 3G HSDPA and LTE standards.
+                    </p>
+                    <p>
+                        Professor Slock has graduated 46 Ph.D. students and published over 600 articles, receiving ten best paper awards. He was awarded the URSI France Medal in 2018 and became a Knight of the French "Ordre des Palmes Académiques" in 2023. He is a Life Fellow of both IEEE and EURASIP.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Speaker 4: Zhou Fan -->
+        <div class="speaker-number">Speaker 4</div>
+        <div class="speaker-container">
+            <div class="speaker-left">
+                <div class="photo-container">
+                    <img src="assets/fan.jpg" alt="Zhou Fan" class="speaker-photo">
+                </div>
+                <div class="speaker-name">
+                    <a href="http://www.stat.yale.edu/~zf59/" target="_blank">Zhou Fan</a>
+                </div>
+                <div class="speaker-affiliation">Yale University</div>
+            </div>
+            
+            <div class="speaker-right">
+                <div class="bio-title">
+                    <i class="fas fa-user-circle"></i>Biography
+                </div>
+                <div class="speaker-bio">
+                    <p>
+                        Zhou Fan is an Associate Professor in the Department of Statistics and Data Science at Yale University. His research interests lie at the intersection of mathematical statistics, probability theory, and computational algorithms, with a particular focus on inferential problems in scientific applications, including statistical genetics and computational biology.
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
