@@ -1,98 +1,94 @@
 <style>
 .cfp-layout {
     display: flex;
-    gap: 36px;
+    gap: 34px;
     align-items: flex-start;
-    margin-top: 24px;
-    margin-bottom: 20px;
+    margin-top: 22px;
+    margin-bottom: 24px;
 }
 
 .cfp-poster {
-    flex: 1.55;
+    flex: 1.7;
 }
 
 .cfp-poster img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     display: block;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
 }
 
 .cfp-side {
     flex: 1;
+    min-width: 280px;
 }
 
 .cfp-note {
     margin-top: 0;
-    margin-bottom: 22px;
-    font-size: 18px;
-    line-height: 1.65;
-    color: #444;
+    margin-bottom: 20px;
+    font-size: 1.02em;
+    line-height: 1.7;
+    color: #555;
 }
 
-.info-card {
-    background: #fafafa;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    padding: 20px 22px;
-    margin-bottom: 22px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+.cfp-section {
+    margin-bottom: 24px;
 }
 
-.info-card h2 {
-    margin-top: 0;
-    margin-bottom: 14px;
+.cfp-section h2 {
+    margin: 0 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #8B3A3A;
-    font-size: 1.45em;
+    font-size: 1.28em;
     font-weight: normal;
 }
 
 .date-list {
+    list-style: none;
     margin: 0;
-    padding-left: 20px;
+    padding: 0;
 }
 
 .date-list li {
-    margin-bottom: 10px;
-    font-size: 17px;
+    margin-bottom: 12px;
     line-height: 1.6;
     color: #444;
 }
 
-.cfp-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
+.date-label {
+    display: block;
+    color: #8B3A3A;
+    font-weight: bold;
 }
 
-.pdf-download {
+.submit-button {
     display: inline-block;
     background-color: #8B3A3A;
     color: white !important;
-    padding: 12px 18px;
+    padding: 10px 16px;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    text-align: center;
+    border: 1px solid #8B3A3A;
+    transition: background-color 0.25s ease;
 }
 
-.pdf-download:hover {
+.submit-button:hover {
     background-color: #6B2A2A;
 }
 
-.pdf-download.secondary {
-    background-color: #4682B4;
+.cfp-links {
+    margin-top: 14px;
+    line-height: 1.9;
 }
 
-.pdf-download.secondary:hover {
-    background-color: #35658c;
+.cfp-links a {
+    color: #4682B4;
+    text-decoration: none;
 }
 
-.pdf-download i {
-    margin-right: 8px;
+.cfp-links a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 980px) {
@@ -110,7 +106,7 @@
 <h1>Call for Papers</h1>
 
 <p>
-    We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop aims to bring together researchers from information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent theoretical advances in high-dimensional learning and inference.
+    We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent advances in high-dimensional learning and inference.
 </p>
 
 <div class="cfp-layout">
@@ -120,35 +116,44 @@
 
     <div class="cfp-side">
         <p class="cfp-note">
-            Join us at ISIT 2026 in Guangzhou for the <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> Workshop. Key deadlines and official submission links are provided here for quick access.
+            Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
         </p>
 
-        <div class="info-card">
+        <div class="cfp-section">
             <h2>Important Dates</h2>
             <ul class="date-list">
-                <li><strong>Paper submission deadline:</strong> April 7, 2026</li>
-                <li><strong>Acceptance notification:</strong> April 21, 2026</li>
-                <li><strong>Final manuscript deadline:</strong> April 28, 2026</li>
-                <li><strong>Workshop date:</strong> July 3, 2026</li>
+                <li>
+                    <span class="date-label">Paper submission deadline</span>
+                    April 7, 2026
+                </li>
+                <li>
+                    <span class="date-label">Acceptance notification</span>
+                    April 21, 2026
+                </li>
+                <li>
+                    <span class="date-label">Final manuscript deadline</span>
+                    April 28, 2026
+                </li>
+                <li>
+                    <span class="date-label">Workshop date</span>
+                    July 3, 2026
+                </li>
             </ul>
         </div>
 
-        <div class="info-card">
+        <div class="cfp-section">
             <h2>Submission</h2>
             <p>
                 Papers should be submitted through the official ISIT 2026 workshop submission system.
             </p>
 
-            <div class="cfp-buttons">
-                <a href="https://edas.info/N34669" class="pdf-download" target="_blank">
-                    <i class="fas fa-paper-plane"></i> Submit via EDAS
-                </a>
-                <a href="https://2026.ieee-isit.org/workshops" class="pdf-download secondary" target="_blank">
-                    <i class="fas fa-up-right-from-square"></i> Workshop Page
-                </a>
-                <a href="https://2026.ieee-isit.org/information-authors" class="pdf-download secondary" target="_blank">
-                    <i class="fas fa-file-lines"></i> Author Guidelines
-                </a>
+            <p>
+                <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper</a>
+            </p>
+
+            <div class="cfp-links">
+                <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
+                <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
             </div>
         </div>
     </div>
@@ -156,7 +161,6 @@
 
 <br><br><br>
 
-<!-- 显示计数 -->
 <p style="font-size: 12px; color: #999; text-align: center;">
     Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
 </p>
