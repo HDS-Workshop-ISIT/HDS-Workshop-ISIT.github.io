@@ -11,13 +11,11 @@
     <title>Call for Papers - Universality and Dynamics Workshop</title>
 
     <style>
-        /* --- Global default font: Sans-serif --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
 
-        /* Banner image style */
         .banner {
             width: 100%;
             height: 400px;
@@ -34,7 +32,6 @@
             display: block;
         }
 
-        /* --- Header info style --- */
         .header-info {
             padding: 30px 0;
             text-align: left;
@@ -64,7 +61,6 @@
             text-align: center;
         }
 
-        /* --- Page title style (Red Serif) --- */
         h2 {
             font-family: Georgia, "Times New Roman", Times, serif !important;
             color: #8B3A3A !important;
@@ -79,24 +75,21 @@
             font-size: 0.9em;
         }
 
-        /* Body paragraphs */
         p {
             font-size: 18px;
             line-height: 1.6;
             color: #444;
         }
 
-        /* --- CFP specific layout --- */
+        /* CFP vertical layout */
         .cfp-layout {
-            display: flex;
-            gap: 34px;
-            align-items: flex-start;
             margin-top: 22px;
             margin-bottom: 24px;
         }
 
         .cfp-poster {
-            flex: 1.7;
+            max-width: 760px;
+            margin: 0 auto 28px auto;
         }
 
         .cfp-poster img {
@@ -106,21 +99,21 @@
             box-sizing: border-box;
         }
 
-        .cfp-side {
-            flex: 1;
-            min-width: 280px;
+        .cfp-content {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .cfp-note {
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             font-size: 1.02em;
             line-height: 1.7;
             color: #555;
         }
 
         .cfp-section {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .cfp-section h3 {
@@ -129,7 +122,7 @@
             border-bottom: 1px solid #ddd;
             font-family: Georgia, "Times New Roman", Times, serif;
             color: #8B3A3A;
-            font-size: 1.28em;
+            font-size: 1.45em;
             font-weight: normal;
         }
 
@@ -140,7 +133,7 @@
         }
 
         .date-list li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             line-height: 1.6;
             color: #444;
             font-size: 17px;
@@ -186,14 +179,10 @@
             margin-top: 14px;
         }
 
-        @media (max-width: 980px) {
-            .cfp-layout {
-                flex-direction: column;
-            }
-
+        @media (max-width: 900px) {
             .cfp-poster,
-            .cfp-side {
-                width: 100%;
+            .cfp-content {
+                max-width: 100%;
             }
         }
     </style>
@@ -247,7 +236,7 @@
             <img src="call.jpg" alt="Workshop Call for Papers Poster">
         </div>
 
-        <div class="cfp-side">
+        <div class="cfp-content">
             <p class="cfp-note">
                 Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
             </p>
