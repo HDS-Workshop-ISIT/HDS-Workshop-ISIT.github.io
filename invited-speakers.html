@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <base href=".">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <meta name="description" content="Plenary Speakers - Universality and Dynamics Workshop">
-    <title>Plenary Speakers - Universality and Dynamics Workshop</title>
+
+    <meta name="description" content="Call for Papers - Universality and Dynamics Workshop">
+    <title>Call for Papers - Universality and Dynamics Workshop</title>
 
     <style>
         /* --- Global default font: Sans-serif --- */
@@ -20,16 +20,17 @@
         /* Banner image style */
         .banner {
             width: 100%;
-            height: 400px; 
+            height: 400px;
             overflow: hidden;
             line-height: 0;
             border-bottom: 5px solid #eee;
         }
+
         .banner img {
             width: 100%;
-            height: 100%; 
-            object-fit: cover; 
-            object-position: center; 
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
             display: block;
         }
 
@@ -40,11 +41,11 @@
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
         }
-        
+
         .header-info .main-title {
-            font-family: Georgia, "Times New Roman", Times, serif; 
-            font-size: 34px; 
-            font-weight: bold; 
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 34px;
+            font-weight: bold;
             line-height: 1.3;
         }
 
@@ -55,7 +56,7 @@
             font-weight: 500;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        
+
         .header-info .meta-info i {
             color: #555;
             margin-right: 5px;
@@ -65,15 +66,14 @@
 
         /* --- Page title style (Red Serif) --- */
         h2 {
-            font-family: Georgia, "Times New Roman", Times, serif !important; 
-            color: #8B3A3A !important; 
+            font-family: Georgia, "Times New Roman", Times, serif !important;
+            color: #8B3A3A !important;
             font-weight: normal;
             font-size: 2.2em;
             margin-top: 30px;
             margin-bottom: 20px;
         }
-        
-        /* Icon style in titles: add right spacing */
+
         h2 i {
             margin-right: 12px;
             font-size: 0.9em;
@@ -86,173 +86,120 @@
             color: #444;
         }
 
-        /* --- Note text style --- */
-        .note {
-            font-size: 17px;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 40px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #8B3A3A;
+        /* --- CFP specific layout --- */
+        .cfp-layout {
+            display: flex;
+            gap: 34px;
+            align-items: flex-start;
+            margin-top: 22px;
+            margin-bottom: 24px;
         }
 
-        /* --- Speaker wrapper container --- */
-        .speakers-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .cfp-poster {
+            flex: 1.7;
+        }
+
+        .cfp-poster img {
+            width: 100%;
+            display: block;
+            border: 1px solid #d9d9d9;
             box-sizing: border-box;
         }
 
-        /* --- Speaker name title (replaces speaker-number) --- */
-        .speaker-name-title {
+        .cfp-side {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .cfp-note {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.02em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cfp-section {
+            margin-bottom: 24px;
+        }
+
+        .cfp-section h3 {
+            margin: 0 0 12px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
             font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 2.6em;
+            color: #8B3A3A;
+            font-size: 1.28em;
+            font-weight: normal;
+        }
+
+        .date-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .date-list li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #444;
+            font-size: 17px;
+        }
+
+        .date-label {
+            display: block;
             color: #8B3A3A;
             font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 25px;
-            padding: 15px 0;
-            border-bottom: 3px solid #8B3A3A;
-            text-align: left;
         }
 
-        .speaker-name-title a {
-            color: #8B3A3A;
+        .submit-button {
+            display: inline-block;
+            background-color: #8B3A3A;
+            color: white !important;
+            padding: 10px 16px;
             text-decoration: none;
-            transition: color 0.3s;
+            border: 1px solid #8B3A3A;
+            transition: background-color 0.25s ease;
         }
 
-        .speaker-name-title a:hover {
+        .submit-button:hover {
+            background-color: #6B2A2A;
+        }
+
+        .cfp-links {
+            margin-top: 14px;
+            line-height: 1.9;
+        }
+
+        .cfp-links a {
             color: #4682B4;
+            text-decoration: none;
+        }
+
+        .cfp-links a:hover {
             text-decoration: underline;
         }
 
-        /* --- Speaker container style --- */
-        .speaker-container {
-            display: flex;
-            margin-bottom: 50px;
-            gap: 30px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Left info area (narrow) */
-        .speaker-left {
-            flex-shrink: 0;
-            width: 240px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Photo container with fixed size */
-        .photo-container {
-            width: 200px;
-            height: 250px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-        }
-
-        .photo-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .photo-link {
-            display: block;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .speaker-photo {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
-
-        .speaker-affiliation {
-            font-size: 17px;
-            color: #666;
-            line-height: 1.4;
-            word-wrap: break-word;
-            width: 100%;
-        }
-
-        /* Right bio area (wide) */
-        .speaker-right {
-            flex: 1;
-            min-width: 0;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        /* Biography subtitle */
-        .bio-title {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 1.4em;
-            color: #4682B4;
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .bio-title i {
-            margin-right: 10px;
-            font-size: 0.9em;
-        }
-
-        /* Biography content box */
-        .speaker-bio {
+        .cfp-format {
             font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-            text-align: justify;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            box-sizing: border-box;
-            width: 100%;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            hyphens: auto;
+            color: #666;
+            margin-top: 14px;
         }
 
-        .speaker-bio p {
-            margin-bottom: 15px;
-            margin-top: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
+        @media (max-width: 980px) {
+            .cfp-layout {
+                flex-direction: column;
+            }
 
-        .speaker-bio p:last-child {
-            margin-bottom: 0;
+            .cfp-poster,
+            .cfp-side {
+                width: 100%;
+            }
         }
-
     </style>
 </head>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
 <body>
 
@@ -265,10 +212,10 @@
             <span style="color: #8B3A3A;">Universality and Dynamics</span><br>
             <span style="color: #4682B4;">in High-Dimensional Learning and Inference</span>
         </div>
-        
+
         <div class="meta-info">
-            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
+            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fas fa-map-marker-alt"></i> Location: Guangzhou, China
         </div>
     </div>
 
@@ -278,180 +225,80 @@
                 <a title="Home Page" href="index.html">Home</a>
             </td>
             <td class="navigation">
-                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+                <a class="current" title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
             </td>
             <td class="navigation">
-                <a title="Workshop Program" href="program.html">Program</a> 
+                <a title="Workshop Program" href="program.html">Program</a>
             </td>
             <td class="navigation">
-                <a class="current" title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
+                <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
             </td>
         </tr>
     </table>
 
-    <h2><i class="fas fa-microphone"></i>Plenary Speakers</h2>
-    
-    <div class="note">
-        <i class="fas fa-info-circle"></i> The speakers are listed in alphabetical order by last name.
+    <h2><i class="fas fa-file-alt"></i>Call for Papers</h2>
+
+    <p>
+        We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent advances in high-dimensional learning and inference.
+    </p>
+
+    <div class="cfp-layout">
+        <div class="cfp-poster">
+            <img src="call.jpg" alt="Workshop Call for Papers Poster">
+        </div>
+
+        <div class="cfp-side">
+            <p class="cfp-note">
+                Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
+            </p>
+
+            <div class="cfp-section">
+                <h3>Important Dates</h3>
+                <ul class="date-list">
+                    <li>
+                        <span class="date-label">Workshop paper submission deadline</span>
+                        April 7, 2026
+                    </li>
+                    <li>
+                        <span class="date-label">Acceptance notification</span>
+                        April 21, 2026
+                    </li>
+                    <li>
+                        <span class="date-label">Final manuscript deadline</span>
+                        April 28, 2026
+                    </li>
+                    <li>
+                        <span class="date-label">Workshop date</span>
+                        July 3, 2026
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cfp-section">
+                <h3>Submission</h3>
+                <p>
+                    Papers should be submitted through the official ISIT 2026 workshop submission system.
+                </p>
+
+                <p>
+                    <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper</a>
+                </p>
+
+                <div class="cfp-links">
+                    <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
+                    <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
+                </div>
+
+                <p class="cfp-format">
+                    Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
+                </p>
+            </div>
+        </div>
     </div>
 
-    <div class="speakers-wrapper">
-        
-        <div class="speaker-name-title">
-            <a href="http://www.stat.yale.edu/~zf59/" target="_blank">Zhou Fan</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="http://www.stat.yale.edu/~zf59/" target="_blank" class="photo-link">
-                        <img src="assets/fan.jpg" alt="Zhou Fan" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">Yale University</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Zhou Fan is an Associate Professor in the Department of Statistics and Data Science at Yale University. His research interests lie at the intersection of mathematical statistics, probability theory, and computational algorithms. He is particularly interested in inferential problems that arise in scientific applications, including statistical genetics and computational biology.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="speaker-name-title">
-            <a href="https://statweb.rutgers.edu/qh85/" target="_blank">Qiyang Han</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="https://statweb.rutgers.edu/qh85/" target="_blank" class="photo-link">
-                        <img src="assets/han.jpg" alt="Qiyang Han" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">Rutgers University</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Qiyang Han is an Associate Professor of Statistics at Rutgers University. He completed his Ph.D. in 2018 from the University of Washington under the supervision of Professor Jon A. Wellner. His research focuses on the theoretical interface of statistics, algorithms, and probability, with major themes including empirical process theory, constrained nonparametric inference, mean-field high-dimensional statistics, and large random iterative algorithms.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="speaker-name-title">
-            <a href="https://brloureiro.github.io/" target="_blank">Bruno Loureiro</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="https://brloureiro.github.io/" target="_blank" class="photo-link">
-                        <img src="assets/loureiro.jpg" alt="Bruno Loureiro" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">CNRS, École Normale Supérieure</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Bruno Loureiro is a CNRS researcher in the DATA team at the Centre for Data Science, École Normale Supérieure in Paris. His research lies at the intersection of machine learning and statistical mechanics. He also serves as a Professeur Attaché at Université Paris Sciences et Lettres (PSL), where he teaches in both undergraduate and graduate programs across its affiliated institutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="speaker-name-title">
-            <a href="https://ece.duke.edu/people/galen-reeves/" target="_blank">Galen Reeves</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="https://ece.duke.edu/people/galen-reeves/" target="_blank" class="photo-link">
-                        <img src="reeves.jpg" alt="Galen Reeves" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">Duke University</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Galen Reeves is an Associate Professor in the Department of Electrical and Computer Engineering at Duke University, with a joint appointment in Statistical Science. He joined Duke in 2013 after completing his Ph.D. in Electrical Engineering and Computer Sciences at the University of California, Berkeley, and a postdoctoral appointment in Statistics at Stanford University. His research interests include information theory, high-dimensional statistical inference, statistical signal processing, compressed sensing, and machine learning.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="speaker-name-title">
-            <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank">Dirk Slock</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="https://www.eurecom.fr/en/people/slock-dirk" target="_blank" class="photo-link">
-                        <img src="assets/slock.jpg" alt="Dirk Slock" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">EURECOM</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Dirk Slock (Life Fellow, IEEE) is a Professor at EURECOM, where he has been since 1991. He received his Ph.D. in Electrical Engineering from Stanford University in 1989. His research focuses on statistical signal processing for wireless communications and audio processing, with notable contributions including innovations adopted in 3G HSDPA and LTE standards. He was awarded the URSI France Medal in 2018 and became a Knight of the French "Ordre des Palmes Académiques" in 2023.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="speaker-name-title">
-            <a href="https://yutingwei.github.io/" target="_blank">Yuting Wei</a>
-        </div>
-        <div class="speaker-container">
-            <div class="speaker-left">
-                <div class="photo-container">
-                    <a href="https://yutingwei.github.io/" target="_blank" class="photo-link">
-                        <img src="assets/yuting.png" alt="Yuting Wei" class="speaker-photo">
-                    </a>
-                </div>
-                <div class="speaker-affiliation">University of Pennsylvania</div>
-            </div>
-            
-            <div class="speaker-right">
-                <div class="bio-title">
-                    <i class="fas fa-user-circle"></i>Biography
-                </div>
-                <div class="speaker-bio">
-                    <p>
-                        Yuting Wei is an Associate Professor in the Department of Statistics and Data Science at the Wharton School, University of Pennsylvania. Previously, she was an Assistant Professor at Carnegie Mellon University and a Stein's Fellow at Stanford. She received her Ph.D. in Statistics from UC Berkeley. Her research interests lie in statistics, mathematical optimization, information theory, and machine learning, focusing on high-dimensional data, reinforcement learning, and diffusion models.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-<p style="font-size: 12px; color: #999; text-align: center;">
-    Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
-</p>
+    <p style="font-size: 12px; color: #999; text-align: center;">
+        Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
+    </p>
 
     <footer>
         &copy; Universality and Dynamics Workshop 2026
