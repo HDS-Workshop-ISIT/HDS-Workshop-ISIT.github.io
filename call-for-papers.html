@@ -41,14 +41,14 @@
 
         .header-info .main-title {
             font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 34px;
+            font-size: 36px;
             font-weight: bold;
-            line-height: 1.3;
+            line-height: 1.28;
         }
 
         .header-info .meta-info {
             margin-top: 15px;
-            font-size: 20px;
+            font-size: 22px;
             color: #666;
             font-weight: 500;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -65,8 +65,8 @@
             font-family: Georgia, "Times New Roman", Times, serif !important;
             color: #8B3A3A !important;
             font-weight: normal;
-            font-size: 2.2em;
-            margin-top: 30px;
+            font-size: 2.5em;
+            margin-top: 26px;
             margin-bottom: 20px;
         }
 
@@ -75,21 +75,26 @@
             font-size: 0.9em;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
+        /* Main CFP block: everything aligned to the same width */
+        .cfp-main {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .cfp-main p {
+            font-size: 21px;
+            line-height: 1.72;
             color: #444;
         }
 
-        /* CFP vertical layout */
         .cfp-layout {
-            margin-top: 22px;
-            margin-bottom: 24px;
+            margin-top: 24px;
+            margin-bottom: 28px;
         }
 
         .cfp-poster {
-            max-width: 760px;
-            margin: 0 auto 28px auto;
+            width: 100%;
+            margin: 0 0 28px 0;
         }
 
         .cfp-poster img {
@@ -100,29 +105,28 @@
         }
 
         .cfp-content {
-            max-width: 760px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         .cfp-note {
             margin-top: 0;
-            margin-bottom: 24px;
-            font-size: 1.02em;
-            line-height: 1.7;
+            margin-bottom: 28px;
+            font-size: 21px;
+            line-height: 1.75;
             color: #555;
         }
 
         .cfp-section {
-            margin-bottom: 28px;
+            margin-bottom: 34px;
         }
 
         .cfp-section h3 {
-            margin: 0 0 12px 0;
-            padding-bottom: 6px;
+            margin: 0 0 14px 0;
+            padding-bottom: 8px;
             border-bottom: 1px solid #ddd;
             font-family: Georgia, "Times New Roman", Times, serif;
             color: #8B3A3A;
-            font-size: 1.45em;
+            font-size: 1.7em;
             font-weight: normal;
         }
 
@@ -133,25 +137,28 @@
         }
 
         .date-list li {
-            margin-bottom: 14px;
-            line-height: 1.6;
+            margin-bottom: 18px;
+            line-height: 1.65;
             color: #444;
-            font-size: 17px;
+            font-size: 20px;
         }
 
         .date-label {
             display: block;
             color: #8B3A3A;
             font-weight: bold;
+            font-size: 1.02em;
+            margin-bottom: 2px;
         }
 
         .submit-button {
             display: inline-block;
             background-color: #8B3A3A;
             color: white !important;
-            padding: 10px 16px;
+            padding: 14px 22px;
             text-decoration: none;
             border: 1px solid #8B3A3A;
+            font-size: 20px;
             transition: background-color 0.25s ease;
         }
 
@@ -160,8 +167,9 @@
         }
 
         .cfp-links {
-            margin-top: 14px;
-            line-height: 1.9;
+            margin-top: 18px;
+            line-height: 2.0;
+            font-size: 19px;
         }
 
         .cfp-links a {
@@ -174,15 +182,32 @@
         }
 
         .cfp-format {
-            font-size: 16px;
-            color: #666;
-            margin-top: 14px;
+            font-size: 18px !important;
+            color: #666 !important;
+            margin-top: 18px;
+        }
+
+        .counter-text {
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+            margin-top: 28px;
         }
 
         @media (max-width: 900px) {
-            .cfp-poster,
-            .cfp-content {
+            .cfp-main {
                 max-width: 100%;
+            }
+
+            .cfp-main p,
+            .cfp-note {
+                font-size: 19px;
+            }
+
+            .date-list li,
+            .cfp-links,
+            .submit-button {
+                font-size: 18px;
             }
         }
     </style>
@@ -225,69 +250,71 @@
         </tr>
     </table>
 
-    <h2><i class="fas fa-file-alt"></i>Call for Papers</h2>
+    <div class="cfp-main">
+        <h2><i class="fas fa-file-alt"></i>Call for Papers</h2>
 
-    <p>
-        We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent advances in high-dimensional learning and inference.
-    </p>
+        <p>
+            We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent advances in high-dimensional learning and inference.
+        </p>
 
-    <div class="cfp-layout">
-        <div class="cfp-poster">
-            <img src="call.jpg" alt="Workshop Call for Papers Poster">
-        </div>
-
-        <div class="cfp-content">
-            <p class="cfp-note">
-                Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
-            </p>
-
-            <div class="cfp-section">
-                <h3>Important Dates</h3>
-                <ul class="date-list">
-                    <li>
-                        <span class="date-label">Workshop paper submission deadline</span>
-                        April 7, 2026
-                    </li>
-                    <li>
-                        <span class="date-label">Acceptance notification</span>
-                        April 21, 2026
-                    </li>
-                    <li>
-                        <span class="date-label">Final manuscript deadline</span>
-                        April 28, 2026
-                    </li>
-                    <li>
-                        <span class="date-label">Workshop date</span>
-                        July 3, 2026
-                    </li>
-                </ul>
+        <div class="cfp-layout">
+            <div class="cfp-poster">
+                <img src="call.jpg" alt="Workshop Call for Papers Poster">
             </div>
 
-            <div class="cfp-section">
-                <h3>Submission</h3>
-                <p>
-                    Papers should be submitted through the official ISIT 2026 workshop submission system.
+            <div class="cfp-content">
+                <p class="cfp-note">
+                    Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
                 </p>
 
-                <p>
-                    <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper</a>
-                </p>
-
-                <div class="cfp-links">
-                    <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
-                    <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
+                <div class="cfp-section">
+                    <h3>Important Dates</h3>
+                    <ul class="date-list">
+                        <li>
+                            <span class="date-label">Workshop paper submission deadline</span>
+                            April 7, 2026
+                        </li>
+                        <li>
+                            <span class="date-label">Acceptance notification</span>
+                            April 21, 2026
+                        </li>
+                        <li>
+                            <span class="date-label">Final manuscript deadline</span>
+                            April 28, 2026
+                        </li>
+                        <li>
+                            <span class="date-label">Workshop date</span>
+                            July 3, 2026
+                        </li>
+                    </ul>
                 </div>
 
-                <p class="cfp-format">
-                    Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
-                </p>
+                <div class="cfp-section">
+                    <h3>Submission</h3>
+                    <p>
+                        Papers should be submitted through the official ISIT 2026 workshop submission system.
+                    </p>
+
+                    <p>
+                        <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper</a>
+                    </p>
+
+                    <div class="cfp-links">
+                        <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
+                        <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
+                    </div>
+
+                    <p class="cfp-format">
+                        Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <p style="font-size: 12px; color: #999; text-align: center;">
-        Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
-    </p>
+        <p class="counter-text">
+            Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
+        </p>
+    </div>
 
     <footer>
         &copy; Universality and Dynamics Workshop 2026
