@@ -11,195 +11,203 @@
     <title>Call for Papers - Universality and Dynamics Workshop</title>
 
     <style>
+        :root {
+            --accent: #8B3A3A;
+            --accent-blue: #4682B4;
+            --text: #333;
+            --muted: #666;
+            --line: #dddddd;
+            --soft: #f8f6f4;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: #333;
+            color: var(--text);
+            background: #fff;
         }
 
         .banner {
             width: 100%;
-            height: 400px;
+            height: 320px;
             overflow: hidden;
             line-height: 0;
-            border-bottom: 5px solid #eee;
+            border-bottom: 1px solid #e5e5e5;
         }
 
         .banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
             display: block;
+        }
+
+        .page-wrap {
+            width: 100%;
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 24px 40px 24px;
         }
 
         .header-info {
-            padding: 30px 0;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+            padding: 28px 0 22px 0;
+            border-bottom: 1px solid var(--line);
             margin-bottom: 20px;
         }
 
-        .header-info .main-title {
+        .main-title {
             font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 36px;
+            font-size: 38px;
             font-weight: bold;
-            line-height: 1.28;
+            line-height: 1.24;
         }
 
-        .header-info .meta-info {
-            margin-top: 15px;
-            font-size: 22px;
-            color: #666;
+        .main-title .line1 {
+            color: var(--accent);
+        }
+
+        .main-title .line2 {
+            color: var(--accent-blue);
+        }
+
+        .meta-info {
+            margin-top: 14px;
+            font-size: 20px;
+            color: var(--muted);
             font-weight: 500;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        .header-info .meta-info i {
-            color: #555;
-            margin-right: 5px;
-            width: 15px;
-            text-align: center;
+        .meta-info i {
+            margin-right: 6px;
         }
 
         h2 {
-            font-family: Georgia, "Times New Roman", Times, serif !important;
-            color: #8B3A3A !important;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: var(--accent);
             font-weight: normal;
-            font-size: 2.5em;
-            margin-top: 26px;
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            margin: 28px 0 18px 0;
         }
 
         h2 i {
-            margin-right: 12px;
-            font-size: 0.9em;
+            margin-right: 10px;
         }
 
-        .cfp-main {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .cfp-main p {
-            font-size: 21px;
+        .intro p,
+        .cfp-note,
+        .section p {
+            font-size: 18px;
             line-height: 1.72;
             color: #444;
+            margin: 0 0 16px 0;
         }
 
-        .cfp-layout {
-            margin-top: 24px;
-            margin-bottom: 28px;
+        .poster-image {
+            margin: 20px 0 24px 0;
         }
 
-        .cfp-poster {
+        .poster-image img {
             width: 100%;
-            margin: 0 0 20px 0;
-        }
-
-        .cfp-poster img {
-            width: 100%;
+            max-width: 100%;
             display: block;
-            border: 1px solid #d9d9d9;
-            box-sizing: border-box;
+            border: 1px solid var(--line);
         }
 
-        .route-highlight {
+        .route-box {
             margin: 0 0 28px 0;
-            padding: 24px 24px 16px 24px;
-            border: 1px solid #ddd;
-            background: #faf8f6;
+            padding: 22px;
+            border: 1px solid var(--line);
+            background: var(--soft);
         }
 
-        .route-highlight-title {
-            margin: 0 0 18px 0;
+        .route-box-title {
             font-family: Georgia, "Times New Roman", Times, serif;
-            color: #8B3A3A;
-            font-size: 1.75em;
-            font-weight: normal;
+            color: var(--accent);
+            font-size: 1.9em;
+            margin: 0 0 18px 0;
         }
 
         .route-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-wrap: wrap;
             gap: 18px;
         }
 
         .route-card {
-            background: white;
-            border: 1px solid #d9d9d9;
-            padding: 20px 20px 18px 20px;
-            box-sizing: border-box;
+            flex: 1 1 420px;
+            min-width: 0;
+            background: var(--card);
+            border: 1px solid var(--line);
+            padding: 20px 18px 18px 18px;
         }
 
         .route-badge {
             display: inline-block;
-            margin-bottom: 12px;
-            padding: 6px 10px;
-            font-size: 13px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 12px;
             font-weight: bold;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            color: white;
-            background: #8B3A3A;
+            padding: 6px 10px;
+            margin-bottom: 12px;
         }
 
-        .route-card h4 {
+        .route-card h3 {
             margin: 0 0 10px 0;
             font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 1.45em;
             font-weight: normal;
-            color: #333;
+            font-size: 1.45em;
+            color: #222;
         }
 
         .route-card p {
-            margin: 0 0 12px 0;
-            font-size: 18px;
-            line-height: 1.65;
+            margin: 0 0 10px 0;
+            font-size: 17px;
+            line-height: 1.68;
             color: #444;
         }
 
         .route-meta {
-            font-size: 17px !important;
-            color: #666 !important;
+            color: var(--muted) !important;
+            font-size: 15px !important;
         }
 
         .route-link {
             display: inline-block;
-            margin-top: 4px;
-            color: #4682B4;
+            margin-top: 6px;
+            color: var(--accent-blue);
             text-decoration: none;
-            font-size: 18px;
             font-weight: 500;
+            font-size: 17px;
         }
 
         .route-link:hover {
             text-decoration: underline;
         }
 
-        .cfp-content {
-            width: 100%;
-        }
-
         .cfp-note {
-            margin-top: 0;
-            margin-bottom: 28px;
-            font-size: 21px;
-            line-height: 1.75;
+            margin: 0 0 26px 0;
             color: #555;
         }
 
-        .cfp-section {
+        .section {
             margin-bottom: 34px;
         }
 
-        .cfp-section h3 {
-            margin: 0 0 14px 0;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #ddd;
+        .section h3 {
             font-family: Georgia, "Times New Roman", Times, serif;
-            color: #8B3A3A;
+            color: var(--accent);
             font-size: 1.7em;
             font-weight: normal;
+            margin: 0 0 14px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--line);
         }
 
         .date-list {
@@ -209,54 +217,54 @@
         }
 
         .date-list li {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
+            font-size: 18px;
             line-height: 1.65;
             color: #444;
-            font-size: 20px;
         }
 
         .date-label {
             display: block;
-            color: #8B3A3A;
+            color: var(--accent);
             font-weight: bold;
-            font-size: 1.02em;
             margin-bottom: 2px;
         }
 
         .submit-button {
             display: inline-block;
-            background-color: #8B3A3A;
-            color: white !important;
-            padding: 14px 22px;
+            margin-top: 8px;
+            background: var(--accent);
+            color: #fff !important;
             text-decoration: none;
-            border: 1px solid #8B3A3A;
-            font-size: 20px;
-            transition: background-color 0.25s ease;
+            padding: 13px 20px;
+            border: 1px solid var(--accent);
+            font-size: 17px;
+            transition: 0.2s ease;
         }
 
         .submit-button:hover {
-            background-color: #6B2A2A;
+            background: #6f2f2f;
         }
 
-        .cfp-links {
-            margin-top: 18px;
-            line-height: 2.0;
-            font-size: 19px;
+        .links-block {
+            margin-top: 16px;
+            font-size: 17px;
+            line-height: 1.9;
         }
 
-        .cfp-links a {
-            color: #4682B4;
+        .links-block a {
+            color: var(--accent-blue);
             text-decoration: none;
         }
 
-        .cfp-links a:hover {
+        .links-block a:hover {
             text-decoration: underline;
         }
 
-        .cfp-format {
-            font-size: 18px !important;
-            color: #666 !important;
-            margin-top: 18px;
+        .small-note {
+            margin-top: 16px !important;
+            font-size: 16px !important;
+            color: var(--muted) !important;
         }
 
         .counter-text {
@@ -266,28 +274,44 @@
             margin-top: 28px;
         }
 
-        @media (max-width: 900px) {
-            .cfp-main {
-                max-width: 100%;
+        @media (max-width: 760px) {
+            .banner {
+                height: 220px;
             }
 
-            .cfp-main p,
-            .cfp-note {
-                font-size: 19px;
+            .page-wrap {
+                padding: 0 16px 32px 16px;
             }
 
-            .date-list li,
-            .cfp-links,
-            .submit-button {
-                font-size: 18px;
+            .main-title {
+                font-size: 30px;
             }
 
-            .route-grid {
-                grid-template-columns: 1fr;
+            .meta-info {
+                font-size: 17px;
+                line-height: 1.6;
             }
 
-            .route-card p,
-            .route-link {
+            h2 {
+                font-size: 1.9em;
+            }
+
+            .route-box {
+                padding: 18px 16px;
+            }
+
+            .route-box-title {
+                font-size: 1.6em;
+            }
+
+            .route-card {
+                flex: 1 1 100%;
+            }
+
+            .intro p,
+            .cfp-note,
+            .section p,
+            .date-list li {
                 font-size: 17px;
             }
         }
@@ -302,163 +326,160 @@
         <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
     </div>
 
-    <div class="header-info">
-        <div class="main-title">
-            <span style="color: #8B3A3A;">Universality and Dynamics</span><br>
-            <span style="color: #4682B4;">in High-Dimensional Learning and Inference</span>
+    <div class="page-wrap">
+
+        <div class="header-info">
+            <div class="main-title">
+                <div class="line1">Universality and Dynamics</div>
+                <div class="line2">in High-Dimensional Learning and Inference</div>
+            </div>
+
+            <div class="meta-info">
+                <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 · July 3
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <i class="fas fa-map-marker-alt"></i> Guangzhou, China
+            </div>
         </div>
 
-        <div class="meta-info">
-            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp;
-            <i class="fas fa-map-marker-alt"></i> Location: Guangzhou, China
-        </div>
-    </div>
+        <table class="navigation">
+            <tr>
+                <td class="navigation">
+                    <a title="Home Page" href="index.html">Home</a>
+                </td>
+                <td class="navigation">
+                    <a class="current" title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+                </td>
+                <td class="navigation">
+                    <a title="Workshop Program" href="program.html">Program</a>
+                </td>
+                <td class="navigation">
+                    <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
+                </td>
+            </tr>
+        </table>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a title="Home Page" href="index.html">Home</a>
-            </td>
-            <td class="navigation">
-                <a class="current" title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
-            </td>
-            <td class="navigation">
-                <a title="Workshop Program" href="program.html">Program</a>
-            </td>
-            <td class="navigation">
-                <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
-            </td>
-        </tr>
-    </table>
-
-    <div class="cfp-main">
         <h2><i class="fas fa-file-alt"></i>Call for Papers</h2>
 
-        <p>
-            We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. This workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to develop a unified view of recent advances in high-dimensional learning and inference.
+        <div class="intro">
+            <p>
+                We invite submissions to the <strong>Universality and Dynamics in High-Dimensional Learning and Inference Workshop</strong> at ISIT 2026. The workshop brings together researchers in information theory, machine learning, high-dimensional statistics, random matrix theory, and statistical physics to explore recent progress on universality, dynamics, and inference in modern high-dimensional systems.
+            </p>
+        </div>
+
+        <div class="poster-image">
+            <img src="call.jpg" alt="Workshop Call for Papers Poster">
+        </div>
+
+        <div class="route-box">
+            <div class="route-box-title">Two Submission Routes</div>
+
+            <div class="route-grid">
+                <div class="route-card">
+                    <div class="route-badge">Route 1</div>
+                    <h3>Paper Submission (Proceedings)</h3>
+                    <p>
+                        Submit a workshop paper through <strong>EDAS</strong> if you would like your work to be reviewed for inclusion in the <strong>official workshop proceedings</strong>.
+                    </p>
+                    <p class="route-meta">
+                        Review required · Proceedings eligible · Final manuscript required if accepted
+                    </p>
+                    <a href="https://edas.info/N34669" class="route-link" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via EDAS
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-badge">Route 2</div>
+                    <h3>Poster-Only Submission (Non-Proceedings)</h3>
+                    <p>
+                        Submit through the <strong>Google Form</strong> if you would like to present a poster <strong>without a formal paper</strong>. This route is <strong>not included in the proceedings</strong>.
+                    </p>
+                    <p class="route-meta">
+                        Poster session only · No proceedings paper · Workshop registration required
+                    </p>
+                    <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="route-link" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via Google Form
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="cfp-note">
+            Authors may choose <strong>either</strong> of the two routes above: a <strong>paper submission route</strong> for proceedings consideration, or a <strong>poster-only route</strong> for workshop presentation without a formal paper.
         </p>
 
-        <div class="cfp-layout">
-            <div class="cfp-poster">
-                <img src="call.jpg" alt="Workshop Call for Papers Poster">
+        <div class="section">
+            <h3>Important Dates</h3>
+            <ul class="date-list">
+                <li>
+                    <span class="date-label">Workshop paper submission deadline</span>
+                    April 7, 2026
+                </li>
+                <li>
+                    <span class="date-label">Acceptance notification</span>
+                    April 21, 2026
+                </li>
+                <li>
+                    <span class="date-label">Final manuscript deadline</span>
+                    April 28, 2026
+                </li>
+                <li>
+                    <span class="date-label">Workshop date</span>
+                    July 3, 2026
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Route 1: Paper Submission (Proceedings)</h3>
+            <p>
+                To have your work considered for inclusion in the <strong>ISIT 2026 workshop proceedings</strong>, please submit your paper through the official <strong>EDAS submission system</strong>. Papers submitted through this route will be reviewed and, if accepted, will appear in the official proceedings.
+            </p>
+
+            <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper via EDAS</a>
+
+            <div class="links-block">
+                <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
+                <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
             </div>
 
-            <div class="route-highlight">
-                <div class="route-highlight-title">Two Submission Routes</div>
-                <div class="route-grid">
-                    <div class="route-card">
-                        <div class="route-badge">Route 1</div>
-                        <h4>Paper Submission (Proceedings)</h4>
-                        <p>
-                            Submit a workshop paper through <strong>EDAS</strong> if you would like your work to be reviewed for inclusion in the <strong>official workshop proceedings</strong>.
-                        </p>
-                        <p class="route-meta">
-                            Review required · Proceedings eligible · Final manuscript required if accepted
-                        </p>
-                        <a href="https://edas.info/N34669" class="route-link" target="_blank">
-                            <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via EDAS
-                        </a>
-                    </div>
+            <p class="small-note">
+                Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
+            </p>
+        </div>
 
-                    <div class="route-card">
-                        <div class="route-badge">Route 2</div>
-                        <h4>Poster-Only Submission (Non-Proceedings)</h4>
-                        <p>
-                            Submit through the <strong>Google Form</strong> if you would like to present a poster <strong>without a formal paper</strong>. This route is <strong>not included in the proceedings</strong>.
-                        </p>
-                        <p class="route-meta">
-                            Poster session only · No proceedings paper · Workshop registration required
-                        </p>
-                        <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="route-link" target="_blank">
-                            <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via Google Form
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="section">
+            <h3>Route 2: Poster-Only Submission (Non-Proceedings)</h3>
+            <p>
+                We also welcome <strong>poster-only submissions</strong> without a formal paper. This route is intended for authors who would like to present their work during the <strong>workshop poster session</strong> but do <strong>not</strong> wish to submit a proceedings paper.
+            </p>
 
-            <div class="cfp-content">
-                <p class="cfp-note">
-                    Authors may choose <strong>either</strong> of the two routes above: a <strong>paper submission route</strong> for proceedings consideration, or a <strong>poster-only route</strong> for workshop presentation without a formal paper.
-                </p>
+            <ul class="date-list">
+                <li>
+                    <span class="date-label">Proceedings status</span>
+                    Poster-only submissions will <strong>not</strong> be included in the proceedings.
+                </li>
+                <li>
+                    <span class="date-label">Workshop registration</span>
+                    Poster presenters must register for the workshop.
+                </li>
+                <li>
+                    <span class="date-label">Submission process</span>
+                    Please complete the Google Form with the requested information, including author information, poster title, and poster file.
+                </li>
+                <li>
+                    <span class="date-label">Deadline</span>
+                    There is currently no strict deadline for poster-only submissions, though early submission is encouraged for planning purposes.
+                </li>
+                <li>
+                    <span class="date-label">Poster format</span>
+                    Detailed poster size and formatting requirements will be posted on this page later.
+                </li>
+            </ul>
 
-                <div class="cfp-section">
-                    <h3>Important Dates</h3>
-                    <ul class="date-list">
-                        <li>
-                            <span class="date-label">Workshop paper submission deadline</span>
-                            April 7, 2026
-                        </li>
-                        <li>
-                            <span class="date-label">Acceptance notification</span>
-                            April 21, 2026
-                        </li>
-                        <li>
-                            <span class="date-label">Final manuscript deadline</span>
-                            April 28, 2026
-                        </li>
-                        <li>
-                            <span class="date-label">Workshop date</span>
-                            July 3, 2026
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="cfp-section">
-                    <h3>Route 1: Paper Submission (Proceedings)</h3>
-                    <p>
-                        To have your work considered for inclusion in the <strong>ISIT 2026 workshop proceedings</strong>, please submit your paper through the official <strong>EDAS submission system</strong> below. Papers submitted through this route will undergo review and, if accepted, will appear in the official proceedings.
-                    </p>
-
-                    <p>
-                        <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper via EDAS</a>
-                    </p>
-
-                    <div class="cfp-links">
-                        <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
-                        <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
-                    </div>
-
-                    <p class="cfp-format">
-                        Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
-                    </p>
-                </div>
-
-                <div class="cfp-section">
-                    <h3>Route 2: Poster-Only Submission (Non-Proceedings)</h3>
-                    <p>
-                        We also welcome <strong>poster-only submissions</strong> without a formal paper. This route is intended for authors who would like to present their work during the <strong>workshop poster session</strong> but do <strong>not</strong> wish to submit a proceedings paper.
-                    </p>
-
-                    <ul class="date-list" style="margin-top: 14px;">
-                        <li>
-                            <span class="date-label">Proceedings status</span>
-                            Poster-only submissions will <strong>not</strong> be included in the proceedings.
-                        </li>
-                        <li>
-                            <span class="date-label">Workshop registration</span>
-                            Poster presenters must register for the workshop.
-                        </li>
-                        <li>
-                            <span class="date-label">Submission process</span>
-                            Please complete the Google Form with the requested information, including author information, poster title, and poster file.
-                        </li>
-                        <li>
-                            <span class="date-label">Deadline</span>
-                            There is currently no strict deadline for poster-only submissions, though early submission is encouraged for planning purposes.
-                        </li>
-                        <li>
-                            <span class="date-label">Poster format</span>
-                            Detailed poster size and formatting requirements will be posted on this page later.
-                        </li>
-                    </ul>
-
-                    <p>
-                        <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="submit-button" target="_blank">
-                            <i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Submit a poster via Google Form
-                        </a>
-                    </p>
-                </div>
-            </div>
+            <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="submit-button" target="_blank">
+                <i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Submit a poster via Google Form
+            </a>
         </div>
 
         <p class="counter-text">
