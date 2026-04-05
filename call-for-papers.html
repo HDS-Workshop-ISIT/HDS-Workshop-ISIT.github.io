@@ -75,7 +75,6 @@
             font-size: 0.9em;
         }
 
-        /* Main CFP block: everything aligned to the same width */
         .cfp-main {
             max-width: 860px;
             margin: 0 auto;
@@ -94,7 +93,7 @@
 
         .cfp-poster {
             width: 100%;
-            margin: 0 0 28px 0;
+            margin: 0 0 20px 0;
         }
 
         .cfp-poster img {
@@ -102,6 +101,79 @@
             display: block;
             border: 1px solid #d9d9d9;
             box-sizing: border-box;
+        }
+
+        .route-highlight {
+            margin: 0 0 28px 0;
+            padding: 24px 24px 16px 24px;
+            border: 1px solid #ddd;
+            background: #faf8f6;
+        }
+
+        .route-highlight-title {
+            margin: 0 0 18px 0;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #8B3A3A;
+            font-size: 1.75em;
+            font-weight: normal;
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .route-card {
+            background: white;
+            border: 1px solid #d9d9d9;
+            padding: 20px 20px 18px 20px;
+            box-sizing: border-box;
+        }
+
+        .route-badge {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 10px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: white;
+            background: #8B3A3A;
+        }
+
+        .route-card h4 {
+            margin: 0 0 10px 0;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.45em;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .route-card p {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            line-height: 1.65;
+            color: #444;
+        }
+
+        .route-meta {
+            font-size: 17px !important;
+            color: #666 !important;
+        }
+
+        .route-link {
+            display: inline-block;
+            margin-top: 4px;
+            color: #4682B4;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .route-link:hover {
+            text-decoration: underline;
         }
 
         .cfp-content {
@@ -209,6 +281,15 @@
             .submit-button {
                 font-size: 18px;
             }
+
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .route-card p,
+            .route-link {
+                font-size: 17px;
+            }
         }
     </style>
 </head>
@@ -262,9 +343,42 @@
                 <img src="call.jpg" alt="Workshop Call for Papers Poster">
             </div>
 
+            <div class="route-highlight">
+                <div class="route-highlight-title">Two Submission Routes</div>
+                <div class="route-grid">
+                    <div class="route-card">
+                        <div class="route-badge">Route 1</div>
+                        <h4>Paper Submission (Proceedings)</h4>
+                        <p>
+                            Submit a workshop paper through <strong>EDAS</strong> if you would like your work to be reviewed for inclusion in the <strong>official workshop proceedings</strong>.
+                        </p>
+                        <p class="route-meta">
+                            Review required · Proceedings eligible · Final manuscript required if accepted
+                        </p>
+                        <a href="https://edas.info/N34669" class="route-link" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via EDAS
+                        </a>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-badge">Route 2</div>
+                        <h4>Poster-Only Submission (Non-Proceedings)</h4>
+                        <p>
+                            Submit through the <strong>Google Form</strong> if you would like to present a poster <strong>without a formal paper</strong>. This route is <strong>not included in the proceedings</strong>.
+                        </p>
+                        <p class="route-meta">
+                            Poster session only · No proceedings paper · Workshop registration required
+                        </p>
+                        <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="route-link" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" style="margin-right: 6px;"></i>Submit via Google Form
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="cfp-content">
                 <p class="cfp-note">
-                    Join us in Guangzhou for a full-day workshop on <strong>Universality and Dynamics in High-Dimensional Learning and Inference</strong> at ISIT 2026.
+                    Authors may choose <strong>either</strong> of the two routes above: a <strong>paper submission route</strong> for proceedings consideration, or a <strong>poster-only route</strong> for workshop presentation without a formal paper.
                 </p>
 
                 <div class="cfp-section">
@@ -290,9 +404,9 @@
                 </div>
 
                 <div class="cfp-section">
-                    <h3>Submission for Paper (Proceedings)</h3>
+                    <h3>Route 1: Paper Submission (Proceedings)</h3>
                     <p>
-                        To have your work included in the ISIT 2026 workshop proceedings, please submit your paper through the official EDAS submission system below. Papers submitted via this channel will undergo a review process and, if accepted, will appear in the official proceedings.
+                        To have your work considered for inclusion in the <strong>ISIT 2026 workshop proceedings</strong>, please submit your paper through the official <strong>EDAS submission system</strong> below. Papers submitted through this route will undergo review and, if accepted, will appear in the official proceedings.
                     </p>
 
                     <p>
@@ -310,33 +424,38 @@
                 </div>
 
                 <div class="cfp-section">
-                    <h3>Submission for Poster Only (Non-Proceedings)</h3>
+                    <h3>Route 2: Poster-Only Submission (Non-Proceedings)</h3>
                     <p>
-                        We also welcome poster presentations without a formal paper submission. Poster-only submissions will <strong>not</strong> be included in the proceedings. If you wish to present a poster at the workshop, please note the following:
+                        We also welcome <strong>poster-only submissions</strong> without a formal paper. This route is intended for authors who would like to present their work during the <strong>workshop poster session</strong> but do <strong>not</strong> wish to submit a proceedings paper.
                     </p>
 
                     <ul class="date-list" style="margin-top: 14px;">
                         <li>
+                            <span class="date-label">Proceedings status</span>
+                            Poster-only submissions will <strong>not</strong> be included in the proceedings.
+                        </li>
+                        <li>
                             <span class="date-label">Workshop registration</span>
-                            Presenters must register for the workshop.
+                            Poster presenters must register for the workshop.
                         </li>
                         <li>
                             <span class="date-label">Submission process</span>
-                            Please fill out the Google Form below with the required information: author name(s), poster title, and either a link to your paper (arXiv or published version) or an uploaded poster file.
+                            Please complete the Google Form with the requested information, including author information, poster title, and poster file.
                         </li>
                         <li>
                             <span class="date-label">Deadline</span>
-                            There is no strict deadline for poster-only submissions, but we encourage early submission to help with planning.
+                            There is currently no strict deadline for poster-only submissions, though early submission is encouraged for planning purposes.
                         </li>
                         <li>
                             <span class="date-label">Poster format</span>
-                            Detailed poster size and format requirements will be updated on this page at a later date. 
+                            Detailed poster size and formatting requirements will be posted on this page later.
                         </li>
                     </ul>
 
                     <p>
-                        <!-- TODO: Replace # with the actual Google Form link -->
-                        <a href="#" class="submit-button" target="_blank"><i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Submit a poster via Google Form</a>
+                        <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="submit-button" target="_blank">
+                            <i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Submit a poster via Google Form
+                        </a>
                     </p>
                 </div>
             </div>
