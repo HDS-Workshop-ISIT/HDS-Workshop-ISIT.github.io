@@ -147,12 +147,47 @@
             color: #666;
         }
 
-        .student-organizers {
+        /* --- Student Organizers --- */
+        .student-organizers-block {
             text-align: center;
+            margin-top: 0;
+            margin-bottom: 38px;
+        }
+
+        .student-organizers-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: "Trebuchet MS", "Avenir Next", Arial, sans-serif;
+            font-size: 26px;
+            color: #6A5A8C;
+            margin-bottom: 12px;
+        }
+
+        .student-organizers-title i {
+            font-size: 30px;
+        }
+
+        .student-organizers-list {
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+            padding-left: 28px;
             font-size: 18px;
+            line-height: 1.8;
             color: #444;
-            margin-top: -5px;
-            margin-bottom: 35px;
+            font-family: "Trebuchet MS", "Avenir Next", Arial, sans-serif;
+        }
+
+        .student-organizers-list a {
+            font-weight: normal;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .student-organizers-list a:hover {
+            color: #4682B4;
+            text-decoration: underline;
         }
 
         /* --- Contact 样式 --- */
@@ -304,14 +339,24 @@
         </tr>
     </table>
 
-<p class="student-organizers">
-    Student Organizers:
-    <a href="mailto:haohuachen22@gmail.com" style="font-weight: normal; color: #2c3e50; text-decoration: none;">Haohua Chen</a>
-    and
-    <a href="mailto:rlwu1026@outlook.com" style="font-weight: normal; color: #2c3e50; text-decoration: none;">Ruilin Wu</a>
-    @ Academy of Mathematics and Systems Science, CAS
-</p>
-    
+    <div class="student-organizers-block">
+        <div class="student-organizers-title">
+            <i class="fas fa-user-graduate"></i>
+            <span>Student Organizers</span>
+        </div>
+
+        <ul class="student-organizers-list">
+            <li>
+                <a href="mailto:haohuachen22@gmail.com">Haohua Chen</a>
+                @ Academy of Mathematics and Systems Science, CAS
+            </li>
+            <li>
+                <a href="mailto:rlwu1026@outlook.com">Ruilin Wu</a>
+                @ Academy of Mathematics and Systems Science, CAS
+            </li>
+        </ul>
+    </div>
+
     <h2><i class="fas fa-address-card"></i>Contact</h2>
     <div class="contact-list" style="margin-bottom: 50px;">
         <p>
