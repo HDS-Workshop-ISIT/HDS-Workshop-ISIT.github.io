@@ -75,7 +75,7 @@
         /* 标题内的图标样式：增加右侧间距 */
         h2 i {
             margin-right: 12px;
-            font-size: 0.9em; /* 图标稍微比文字小一点点，视觉更平衡 */
+            font-size: 0.9em;
         }
 
         /* 正文段落 */
@@ -133,12 +133,10 @@
             transition: color 0.3s;
         }
 
-        /* 鼠标悬浮在 Organizer 卡片上时，名字变蓝 */
         .sponsor a:hover strong {
             color: #4682B4;
         }
 
-        /* 鼠标悬浮在 Organizer 卡片上时，显示名字旁边的图标 */
         .sponsor a:hover .hover-icon {
             opacity: 1;
             transform: translate(2px, -2px);
@@ -164,7 +162,6 @@
             text-decoration: underline;
         }
 
-        /* --- 名字悬浮特效通用样式 --- */
         .contact-name {
             color: #2c3e50;
             text-decoration: none;
@@ -178,23 +175,49 @@
             text-decoration: underline;
         }
 
-        /* 悬浮图标样式 (默认隐藏) */
         .hover-icon {
             font-size: 0.8em;
             margin-left: 5px;
-            opacity: 0; /* 默认不显示 */
+            opacity: 0;
             transition: opacity 0.3s, transform 0.3s;
-            color: #4682B4; /* 图标也是蓝色 */
+            color: #4682B4;
         }
 
         .contact-name:hover .hover-icon {
             opacity: 1;
             transform: translate(2px, -2px);
         }
+
+        /* --- Sponsor section --- */
+        .sponsor-block {
+            text-align: center;
+            margin: 10px 0 40px 0;
+        }
+
+        .sponsor-logo {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+
+        .sponsor-note {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sponsor-note a {
+            color: #4682B4;
+            text-decoration: none;
+        }
+
+        .sponsor-note a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
-<!-- 脚本（放在 </body> 前） -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <body>
@@ -213,23 +236,22 @@
         </div>
     </div>
 
-<table class="navigation">
-    <tr>
-        <td class="navigation">
-            <a class="current" title="Home Page" href="index.html">Home</a>
-        </td>
-        <td class="navigation">
-            <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
-        </td>
-        <td class="navigation">
-            <a title="Workshop Program" href="program.html">Program</a> 
-        </td>
-        <td class="navigation">
-            <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
-        </td>
-    </tr>
-</table>
-
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a class="current" title="Home Page" href="index.html">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Program" href="program.html">Program</a> 
+            </td>
+            <td class="navigation">
+                <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
+            </td>
+        </tr>
+    </table>
 
     <h2><i class="fas fa-chalkboard-user"></i>About the Workshop</h2>
     <p>
@@ -286,10 +308,19 @@
         </p>
     </div>
 
-<!-- 显示计数 -->
-<p style="font-size: 12px; color: #999; text-align: center;">
-    Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
-</p>
+    <h2><i class="fas fa-handshake"></i>Sponsor</h2>
+    <div class="sponsor-block">
+        <img src="huawei_logo.png" alt="Huawei Logo" class="sponsor-logo">
+    </div>
+    <p class="sponsor-note">
+        For general information, see the official website:
+        <a href="https://2026.ieee-isit.org/" target="_blank">https://2026.ieee-isit.org/</a>.
+    </p>
+
+    <p style="font-size: 12px; color: #999; text-align: center;">
+        Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
+    </p>
+
     <footer>
         &copy; Universality and Dynamics Workshop 2026
     </footer>
