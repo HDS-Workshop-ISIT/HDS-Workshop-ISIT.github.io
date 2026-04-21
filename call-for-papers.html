@@ -160,6 +160,16 @@
             margin-bottom: 2px;
         }
 
+        .past-item,
+        .past-item .date-label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .inactive-note {
+            font-weight: bold;
+        }
+
         .submit-button {
             display: inline-block;
             background-color: #8B3A3A;
@@ -274,7 +284,7 @@
 
             <div class="cfp-content">
                 <div class="route-highlight">
-                    There are two submission routes: <strong>paper submissions for proceedings via EDAS</strong> and <strong>poster-only submissions via Google Form</strong>.
+                    There are two submission routes: <strong>poster-only submissions via Google Form</strong> and <strong>paper submissions for proceedings via EDAS</strong>.
                 </div>
 
                 <p class="cfp-note">
@@ -284,9 +294,13 @@
                 <div class="cfp-section">
                     <h3>Important Dates</h3>
                     <ul class="date-list">
-                        <li>
+                        <li class="past-item">
                             <span class="date-label">Workshop paper submission deadline</span>
                             April 7, 2026
+                        </li>
+                        <li>
+                            <span class="date-label">Poster submission deadline</span>
+                            June 20, 2026
                         </li>
                         <li>
                             <span class="date-label">Acceptance notification</span>
@@ -301,26 +315,6 @@
                             July 3, 2026
                         </li>
                     </ul>
-                </div>
-
-                <div class="cfp-section">
-                    <h3>Submission for Paper (Proceedings)</h3>
-                    <p>
-                        To have your work included in the ISIT 2026 workshop proceedings, please submit your paper through the official EDAS submission system below. Papers submitted through this route will be reviewed and, if accepted, will appear in the official proceedings.
-                    </p>
-
-                    <p>
-                        <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper via EDAS</a>
-                    </p>
-
-                    <div class="cfp-links">
-                        <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
-                        <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
-                    </div>
-
-                    <p class="cfp-format">
-                        Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
-                    </p>
                 </div>
 
                 <div class="cfp-section">
@@ -340,7 +334,7 @@
                         </li>
                         <li>
                             <span class="date-label">Deadline</span>
-                            There is currently no strict deadline for poster-only submissions, though early submission is encouraged to help with planning.
+                            June 20, 2026
                         </li>
                         <li>
                             <span class="date-label">Poster format</span>
@@ -352,6 +346,26 @@
                         <a href="https://forms.gle/NBSrPnjqcemoSdjV8" class="submit-button" target="_blank">
                             <i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Submit a poster via Google Form
                         </a>
+                    </p>
+                </div>
+
+                <div class="cfp-section">
+                    <h3><span class="inactive-note">(inactive)</span> Submission for Paper (Proceedings)</h3>
+                    <p>
+                        To have your work included in the ISIT 2026 workshop proceedings, please submit your paper through the official EDAS submission system below. Papers submitted through this route will be reviewed and, if accepted, will appear in the official proceedings.
+                    </p>
+
+                    <p>
+                        <a href="https://edas.info/N34669" class="submit-button" target="_blank">Submit a paper via EDAS</a>
+                    </p>
+
+                    <div class="cfp-links">
+                        <a href="https://2026.ieee-isit.org/workshops" target="_blank">Official ISIT 2026 workshop page</a><br>
+                        <a href="https://2026.ieee-isit.org/information-authors" target="_blank">ISIT 2026 author guidelines</a>
+                    </div>
+
+                    <p class="cfp-format">
+                        Submission format: manuscripts should not exceed 5 pages, plus an optional 6th page containing references only.
                     </p>
                 </div>
             </div>
