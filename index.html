@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang='en'>
 
 <head>
@@ -233,16 +233,29 @@
 
         /* --- Sponsor section --- */
         .sponsor-block {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 55px;
             margin: 10px 0 40px 0;
         }
 
         .sponsor-logo {
-            max-width: 240px;
-            width: 100%;
-            height: auto;
+            height: 80px;
+            width: auto;
+            max-width: 100%;
             display: block;
-            margin: 0 auto 12px auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .sponsor-block {
+                gap: 30px;
+            }
+            .sponsor-logo {
+                height: 60px;
+            }
         }
 
         .sponsor-note {
@@ -357,6 +370,7 @@
 
     <h2><i class="fas fa-handshake"></i>Sponsor</h2>
     <div class="sponsor-block">
+        <img src="itsoc_logo.svg" alt="IEEE Information Theory Society Logo" class="sponsor-logo">
         <img src="huawei_logo.png" alt="Huawei Logo" class="sponsor-logo">
     </div>
     <p class="sponsor-note">
