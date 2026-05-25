@@ -63,12 +63,22 @@
             text-align: center;
         }
 
-        .program-note {
-            margin-top: 24px;
-            margin-bottom: 12px;
-            font-size: 16px;
+        h3.session-header {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .session-legend {
+            margin-left: 18px;
+            font-size: 15px;
+            font-weight: 400;
             color: #555;
-            line-height: 1.5;
+            white-space: nowrap;
         }
 
         .keynote-mark {
@@ -83,16 +93,6 @@
             font-weight: 700;
             font-size: 70%;
             margin-right: 5px;
-        }
-
-        h3.session-header {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            font-weight: 600;
         }
 
         td.title {
@@ -179,12 +179,13 @@
         </tr>
     </table>
 
-    <p class="program-note">
-        <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp; 
-        <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
-    </p>
-
-    <h3 class="session-header">Morning Session (3 hours)</h3>
+    <h3 class="session-header">
+        Morning Session (3 hours)
+        <span class="session-legend">
+            <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp;
+            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
+        </span>
+    </h3>
 
     <table>
         <tr>
@@ -379,7 +380,13 @@
         </tr>
     </table>
 
-    <h3 class="session-header">Afternoon Session (3.5 hours)</h3>
+    <h3 class="session-header">
+        Afternoon Session (3.5 hours)
+        <span class="session-legend">
+            <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp;
+            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
+        </span>
+    </h3>
 
     <table>
         <tr>
@@ -548,12 +555,12 @@
                 17:10–17:30
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup> Orthogonal Approximate Message Passing with Optimal Spectral Initializations for Rectangular Spiked Matrix Models
+                <sup class="spotlight-mark">&dagger;</sup>Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
             </td>
         </tr>
         <tr>
             <td class="info">
-                <span class="info-label">Speaker:</span> Haohua Chen
+                <span class="info-label">Speaker:</span>
                 <span class="info-content"></span>
             </td>
         </tr>
