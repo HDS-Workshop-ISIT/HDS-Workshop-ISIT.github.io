@@ -13,13 +13,11 @@
     <title>Program - Universality and Dynamics</title>
 
     <style>
-        /* --- 全局默认字体：无衬线 (Sans-serif) --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
 
-        /* Banner 图片样式 */
         .banner {
             width: 100%;
             height: 400px; 
@@ -36,7 +34,6 @@
             display: block;
         }
 
-        /* --- 头部信息样式 --- */
         .header-info {
             padding: 30px 0;
             text-align: left;
@@ -66,7 +63,6 @@
             text-align: center;
         }
 
-        /* Session 分段标题 */
         h3.session-header {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin-top: 40px;
@@ -77,7 +73,6 @@
             font-weight: 600;
         }
 
-        /* --- 日程表样式调整 --- */
         td.title {
             color: #8B3A3A;
             font-weight: normal; 
@@ -92,23 +87,10 @@
             padding-bottom: 5px;
         }
 
-        td.abstract {
+        td.info {
             font-size: 18px;
             line-height: 1.6;
             color: #444;
-        }
-
-        td.speaker {
-            font-size: 18px;
-            font-style: italic;
-            color: #555;
-            padding-bottom: 5px;
-        }
-
-        td.speaker-bio {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
             padding-bottom: 5px;
         }
 
@@ -117,10 +99,18 @@
             font-weight: 500;
         }
 
-        .field-label {
+        .info-label {
+            display: inline-block;
+            width: 190px;
             font-weight: 600;
             color: #555;
-            font-style: normal;
+            vertical-align: top;
+        }
+
+        .info-content {
+            display: inline-block;
+            color: #555;
+            vertical-align: top;
         }
 
         .speaker-name {
@@ -130,7 +120,6 @@
     </style>
 </head>
 
-<!-- 脚本（放在 </body> 前） -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <body>
@@ -180,7 +169,7 @@
             </td>
         </tr>
         <tr>
-            <td class="abstract">
+            <td class="info">
                 
             </td>
         </tr>
@@ -192,22 +181,25 @@
                 09:05–09:45
             </td>
             <td class="title">
-                [Keynote talk 1] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Dirk Slock</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Dirk Slock</span> (EURECOM)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -218,22 +210,25 @@
                 09:45–10:05
             </td>
             <td class="title">
-                [Spotlight talk 1] <span class="field-label">Title:</span> Accelerating conformal prediction via approximate leave-one-out
+                Accelerating conformal prediction via approximate leave-one-out
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -248,7 +243,7 @@
             </td>
         </tr>
         <tr>
-            <td class="abstract">
+            <td class="info">
                 
             </td>
         </tr>
@@ -260,22 +255,25 @@
                 10:30–11:10
             </td>
             <td class="title">
-                [Keynote talk 2] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Galen Reeves</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Galen Reeves</span> (Duke University)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -286,22 +284,25 @@
                 11:10–11:50
             </td>
             <td class="title">
-                [Keynote talk 3] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Yuting Wei</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Yuting Wei</span> (University of Pennsylvania)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -312,22 +313,25 @@
                 11:50–12:10
             </td>
             <td class="title">
-                [Spotlight talk 2] <span class="field-label">Title:</span> A Conditional-Gaussian View of Score Universality Through a Low-Dimensional Statistic
+                A Conditional-Gaussian View of Score Universality Through a Low-Dimensional Statistic
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -342,7 +346,7 @@
             </td>
         </tr>
         <tr>
-            <td class="abstract">
+            <td class="info">
                 
             </td>
         </tr>
@@ -356,22 +360,25 @@
                 14:00–14:40
             </td>
             <td class="title">
-                [Keynote talk 4] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Zhou Fan</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Zhou Fan</span> (Yale University)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -382,22 +389,25 @@
                 14:40–15:00
             </td>
             <td class="title">
-                [Spotlight talk 3] <span class="field-label">Title:</span> Universality of first-order methods on random and deterministic matrices
+                Universality of first-order methods on random and deterministic matrices
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -412,7 +422,7 @@
             </td>
         </tr>
         <tr>
-            <td class="abstract">
+            <td class="info">
                 
             </td>
         </tr>
@@ -424,22 +434,25 @@
                 15:30–16:10
             </td>
             <td class="title">
-                [Keynote talk 5] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Qiyang Han</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Qiyang Han</span> (Rutgers University)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -450,22 +463,25 @@
                 16:10–16:50
             </td>
             <td class="title">
-                [Keynote talk 6] <span class="field-label">Title:</span>
+                
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span> <span class="speaker-name">Bruno Loureiro</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"><span class="speaker-name">Bruno Loureiro</span> (CNRS / École Normale Supérieure, Paris)</span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -476,22 +492,25 @@
                 16:50–17:10
             </td>
             <td class="title">
-                [Spotlight talk 4] <span class="field-label">Title:</span> Free Energy Universality in Tensor Estimation via Generic Chaining
+                Free Energy Universality in Tensor Estimation via Generic Chaining
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -502,22 +521,25 @@
                 17:10–17:30
             </td>
             <td class="title">
-                [Spotlight talk 5] <span class="field-label">Title:</span> Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
+                Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
             </td>
         </tr>
         <tr>
-            <td class="speaker">
-                <span class="field-label">Speaker:</span>
+            <td class="info">
+                <span class="info-label">Speaker:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="speaker-bio">
-                <span class="field-label">Speaker introduction:</span>
+            <td class="info">
+                <span class="info-label">Speaker introduction:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
         <tr>
-            <td class="abstract">
-                <span class="field-label">Abstract:</span>
+            <td class="info">
+                <span class="info-label">Abstract:</span>
+                <span class="info-content"></span>
             </td>
         </tr>
     </table>
@@ -532,13 +554,12 @@
             </td>
         </tr>
         <tr>
-            <td class="abstract">
+            <td class="info">
                 
             </td>
         </tr>
     </table>
 
-    <!-- 显示计数 -->
     <p style="font-size: 12px; color: #999; text-align: center;">
         Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
     </p>
