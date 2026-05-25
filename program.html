@@ -150,6 +150,63 @@
             color: #4682B4;
             font-style: normal;
         }
+
+        /* Program CTA card — single focal point linking to the PDF */
+        .program-cta {
+            text-align: center;
+            padding: 70px 20px 80px;
+            margin: 25px auto 10px;
+        }
+
+        .program-cta .program-cta-icon {
+            font-size: 50px;
+            color: #4682B4;
+            margin: 0 0 22px;
+            width: auto;
+        }
+
+        .program-cta-title {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: #8B3A3A;
+            margin: 0 0 14px;
+        }
+
+        .program-cta-text {
+            font-size: 18px;
+            line-height: 1.65;
+            color: #555;
+            max-width: 560px;
+            margin: 0 auto 32px;
+        }
+
+        .program-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-size: 19px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #4682B4;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .program-cta-button:hover {
+            background-color: #3a6d99;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 14px rgba(70, 130, 180, 0.32);
+        }
+
+        .program-cta-button i {
+            color: #fff;
+            margin: 0;
+            width: auto;
+        }
     </style>
 </head>
 
@@ -190,296 +247,19 @@
         </tr>
     </table>
 
-    <h3 class="session-header">
-        Morning Session (3 hours)
-        <span class="session-legend">
-            <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp;
-            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
-        </span>
-    </h3>
 
-    <table>
-        <tr>
-            <td class="date">
-                09:00–09:05
-            </td>
-            <td class="title-special">
-                Opening Remarks
-            </td>
-        </tr>
-    </table>
+    <div class="program-cta">
+        <i class="fas fa-file-pdf program-cta-icon"></i>
+        <h2 class="program-cta-title">Workshop Program</h2>
+        <p class="program-cta-text">
+            The full schedule &mdash; including keynote and spotlight talks, poster
+            sessions, and breaks &mdash; is available as a PDF.
+        </p>
+        <a class="program-cta-button" href="assets/program.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf"></i> View Program (PDF)
+        </a>
+    </div>
 
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                09:05–09:45
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Dirk Slock</span> (EURECOM)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                09:45–10:05
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Accelerating Conformal Prediction via Approximate Leave-One-Out
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Jiachen Cong</span> (University of Illinois Urbana-Champaign)</span>
-                    <span class="author-line"><span class="author-name">Jingbo Liu</span> (University of Illinois Urbana-Champaign)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                10:05–10:30
-            </td>
-            <td class="title-special">
-                Coffee Break &amp; Poster Session
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                10:30–11:10
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Galen Reeves</span> (Duke University)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                11:10–11:50
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Yuting Wei</span> (University of Pennsylvania)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                11:50–12:10
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>A Conditional-Gaussian View of Score Universality Through Low-Dimensional Statistics
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Cosme Louart</span> (Chinese University of Hong Kong, Shenzhen)</span>
-                    <span class="author-line"><span class="author-name">Zhenyu Liao</span> (Huazhong University of Science and Technology)</span>
-                    <span class="author-line"><span class="author-name">Malik Tiomoko</span> (Huawei Technologies France)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                12:10–14:00
-            </td>
-            <td class="title-special">
-                Lunch Break
-            </td>
-        </tr>
-    </table>
-
-    <h3 class="session-header">
-        Afternoon Session (3.5 hours)
-        <span class="session-legend">
-            <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp;
-            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
-        </span>
-    </h3>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                14:00–14:40
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Zhou Fan</span> (Yale University)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                14:40–15:00
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Universality of First-Order Methods on Random and Deterministic Matrices
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Nicola Gorini</span> (Bocconi University)</span>
-                    <span class="author-line"><span class="author-name">Chris Jones</span> (UC Davis)</span>
-                    <span class="author-line"><span class="author-name">Dmitriy Kunisky</span> (Johns Hopkins University)</span>
-                    <span class="author-line"><span class="author-name">Lucas Pesenti</span> (ETH Zürich)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                15:00–15:30
-            </td>
-            <td class="title-special">
-                Coffee Break &amp; Poster Session
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                15:30–16:10
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Qiyang Han</span> (Rutgers University)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                16:10–16:50
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Bruno Loureiro</span> (CNRS / École Normale Supérieure, Paris)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                16:50–17:10
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Free Energy Universality in Tensor Estimation via Generic Chaining
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Wenxuan Zou</span> (Duke University)</span>
-                    <span class="author-line"><span class="author-name">Galen Reeves</span> (Duke University)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                17:10–17:30
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Haohua Chen</span> (Academy of Mathematics and Systems Science, Chinese Academy of Sciences)</span>
-                    <span class="author-line"><span class="author-name">Junjie Ma</span> (Academy of Mathematics and Systems Science, Chinese Academy of Sciences)</span>
-                    <span class="author-line"><span class="author-name">Songbin Liu</span> (Columbia University)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                17:30–17:35
-            </td>
-            <td class="title-special">
-                Closing Remark
-            </td>
-        </tr>
-    </table>
-
-    <p style="font-size: 12px; color: #999; text-align: center;">
         Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
     </p>
 
