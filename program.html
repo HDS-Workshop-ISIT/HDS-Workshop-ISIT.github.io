@@ -18,21 +18,23 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
-/* Banner 图片样式 */
-.banner {
-    width: 100%;
-    height: 400px; 
-    overflow: hidden;
-    line-height: 0;
-    border-bottom: 5px solid #eee;
-}
-.banner img {
-    width: 100%;
-    height: 100%;           /* 改为 100% */
-    object-fit: cover;      /* 添加这行 */
-    object-position: center; /* 添加这行 */
-    display: block;
-}
+
+        /* Banner 图片样式 */
+        .banner {
+            width: 100%;
+            height: 400px; 
+            overflow: hidden;
+            line-height: 0;
+            border-bottom: 5px solid #eee;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
 
         /* --- 头部信息样式 --- */
         .header-info {
@@ -42,7 +44,6 @@
             margin-bottom: 20px;
         }
         
-        /* 主标题：字号 34px，加粗 */
         .header-info .main-title {
             font-family: Georgia, "Times New Roman", Times, serif; 
             font-size: 34px; 
@@ -50,10 +51,9 @@
             line-height: 1.3;
         }
 
-        /* 修改点：Meta 信息行字号加大到 20px */
         .header-info .meta-info {
             margin-top: 15px;
-            font-size: 20px; /* 之前是 15px */
+            font-size: 20px;
             color: #666;
             font-weight: 500;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -78,49 +78,60 @@
         }
 
         /* --- 日程表样式调整 --- */
-        
-        /* 修改点：日程标题字号加大到 24px */
         td.title {
-            color: #8B3A3A; /* 深红色 */
+            color: #8B3A3A;
             font-weight: normal; 
-            font-size: 24px; /* 增大，但小于主标题的 34px */
-            padding-bottom: 5px; /* 增加一点下间距 */
+            font-size: 24px;
+            padding-bottom: 5px;
         }
         
         td.title-special {
-            color: #4682B4; /* 钢蓝色 */
+            color: #4682B4;
             font-weight: normal;
-            font-size: 24px; /* 增大 */
+            font-size: 24px;
             padding-bottom: 5px;
         }
 
-        /* 修改点：摘要内容字号加大到 18px */
         td.abstract {
-            font-size: 18px; /* 增大，但小于日程标题的 24px */
-            line-height: 1.6; /* 增加行高，阅读更舒适 */
+            font-size: 18px;
+            line-height: 1.6;
             color: #444;
         }
 
-        /* 演讲者名字稍微也配合调整一下，保持协调 */
         td.speaker {
             font-size: 18px;
             font-style: italic;
             color: #555;
             padding-bottom: 5px;
         }
-        
-        /* 时间列字号也稍微跟上，保持平衡 */
+
+        td.speaker-bio {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            padding-bottom: 5px;
+        }
+
         td.date {
             font-size: 18px;
             font-weight: 500;
         }
 
+        .field-label {
+            font-weight: 600;
+            color: #555;
+            font-style: normal;
+        }
+
+        .speaker-name {
+            color: #4682B4;
+            font-style: normal;
+        }
     </style>
 </head>
 
 <!-- 脚本（放在 </body> 前） -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
 <body>
 
@@ -140,80 +151,89 @@
         </div>
     </div>
 
-<table class="navigation">
-    <tr>
-        <td class="navigation">
-            <a class="current" title="Home Page" href="index.html">Home</a>
-        </td>
-        <td class="navigation">
-            <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
-        </td>
-        <td class="navigation">
-            <a title="Workshop Program" href="program.html">Program</a> 
-        </td>
-        <td class="navigation">
-            <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
-        </td>
-    </tr>
-</table>
-
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a class="current" title="Home Page" href="index.html">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Program" href="program.html">Program</a> 
+            </td>
+            <td class="navigation">
+                <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
+            </td>
+        </tr>
+    </table>
 
     <h3 class="session-header">Morning Session (3 hours)</h3>
 
     <table>
         <tr>
             <td class="date" rowspan="2">
-                9:00–9:05
+                09:00–09:05
             </td>
             <td class="title-special">
-                Opening remarks
+                Opening Remarks
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Welcome introduction.
+                
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                9:05–9:45
+            <td class="date" rowspan="4">
+                09:05–09:45
             </td>
             <td class="title">
-                [Plenary talk 1] Title: TBD
+                [Keynote talk 1] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Dirk Slock</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                9:45–10:25
+            <td class="date" rowspan="4">
+                09:45–10:05
             </td>
             <td class="title">
-                [Plenary talk 2] Title: TBD
+                [Spotlight talk 1] <span class="field-label">Title:</span> Accelerating conformal prediction via approximate leave-one-out
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
@@ -221,57 +241,93 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                10:25–10:55
+                10:05–10:30
             </td>
             <td class="title-special">
-                Break / Poster session 1
+                Coffee Break &amp; Poster Session
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Coffee and discussion.
+                
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                10:55–11:35
+            <td class="date" rowspan="4">
+                10:30–11:10
             </td>
             <td class="title">
-                [Plenary talk 3] Title: TBD
+                [Keynote talk 2] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Galen Reeves</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                11:35–12:00
+            <td class="date" rowspan="4">
+                11:10–11:50
             </td>
             <td class="title">
-                [Spotlight talk 1] Title: TBD
+                [Keynote talk 3] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Yuting Wei</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="4">
+                11:50–12:10
+            </td>
+            <td class="title">
+                [Spotlight talk 2] <span class="field-label">Title:</span> A Conditional-Gaussian View of Score Universality Through a Low-Dimensional Statistic
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                <span class="field-label">Speaker:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
@@ -279,7 +335,7 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                12:00–14:00
+                12:10–14:00
             </td>
             <td class="title-special">
                 Lunch Break
@@ -287,51 +343,61 @@
         </tr>
         <tr>
             <td class="abstract">
-                 
+                
             </td>
         </tr>
     </table>
 
-    <h3 class="session-header">Afternoon Session (3 hours)</h3>
+    <h3 class="session-header">Afternoon Session (3.5 hours)</h3>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
+            <td class="date" rowspan="4">
                 14:00–14:40
             </td>
             <td class="title">
-                [Plenary talk 4] Title: TBD
+                [Keynote talk 4] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Zhou Fan</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                14:40–15:20
+            <td class="date" rowspan="4">
+                14:40–15:00
             </td>
             <td class="title">
-                [Plenary talk 5] Title: TBD
+                [Spotlight talk 3] <span class="field-label">Title:</span> Universality of first-order methods on random and deterministic matrices
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
@@ -339,57 +405,119 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                15:20–15:50
+                15:00–15:30
             </td>
             <td class="title-special">
-                Break / Poster session 2
+                Coffee Break &amp; Poster Session
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Coffee and discussion.
+                
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                15:50–16:30
+            <td class="date" rowspan="4">
+                15:30–16:10
             </td>
             <td class="title">
-                [Plenary talk 6] Title: TBD
+                [Keynote talk 5] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Qiyang Han</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="date" rowspan="3">
-                16:30–16:55
+            <td class="date" rowspan="4">
+                16:10–16:50
             </td>
             <td class="title">
-                [Spotlight talk 2] Title: TBD
+                [Keynote talk 6] <span class="field-label">Title:</span>
             </td>
         </tr>
         <tr>
             <td class="speaker">
-                Speaker: TBD
+                <span class="field-label">Speaker:</span> <span class="speaker-name">Bruno Loureiro</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                Abstract: TBD
+                <span class="field-label">Abstract:</span>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="4">
+                16:50–17:10
+            </td>
+            <td class="title">
+                [Spotlight talk 4] <span class="field-label">Title:</span> Free Energy Universality in Tensor Estimation via Generic Chaining
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                <span class="field-label">Speaker:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <span class="field-label">Abstract:</span>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="4">
+                17:10–17:30
+            </td>
+            <td class="title">
+                [Spotlight talk 5] <span class="field-label">Title:</span> Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                <span class="field-label">Speaker:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker-bio">
+                <span class="field-label">Speaker introduction:</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <span class="field-label">Abstract:</span>
             </td>
         </tr>
     </table>
@@ -397,23 +525,23 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                16:55–17:00
+                17:30–17:35
             </td>
             <td class="title-special">
-                Closing remarks
+                Closing Remark
             </td>
         </tr>
         <tr>
             <td class="abstract">
-                End of Workshop.
+                
             </td>
         </tr>
     </table>
 
-<!-- 显示计数 -->
-<p style="font-size: 12px; color: #999; text-align: center;">
-    Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
-</p>
+    <!-- 显示计数 -->
+    <p style="font-size: 12px; color: #999; text-align: center;">
+        Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
+    </p>
 
     <footer>
         &copy; Universality and Dynamics Workshop 2026
