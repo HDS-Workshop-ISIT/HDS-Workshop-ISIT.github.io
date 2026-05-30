@@ -157,6 +157,96 @@
             color: #4682B4;
             font-style: normal;
         }
+
+        td.talk-extra {
+            padding-top: 6px;
+            padding-bottom: 18px;
+        }
+
+        .talk-detail-wrap {
+            width: calc(100% - 4px);
+            max-width: 980px;
+            margin-top: 4px;
+        }
+
+        .talk-detail {
+            margin: 10px 0;
+            border: 1px solid rgba(70, 130, 180, 0.22);
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(70, 130, 180, 0.08), rgba(139, 58, 58, 0.04));
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.055);
+            overflow: hidden;
+            transition: all 0.22s ease;
+        }
+
+        .talk-detail:hover {
+            border-color: rgba(70, 130, 180, 0.42);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .talk-detail summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 13px 18px;
+            font-size: 17px;
+            font-weight: 650;
+            color: #3d5f7f;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            letter-spacing: 0.01em;
+        }
+
+        .talk-detail summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .talk-detail summary::after {
+            content: "+";
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: #4682B4;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+
+        .talk-detail[open] summary::after {
+            content: "−";
+            background: #8B3A3A;
+        }
+
+        .detail-heading {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .detail-heading i {
+            color: #8B3A3A;
+            font-size: 15px;
+        }
+
+        .detail-body {
+            padding: 0 18px 17px 18px;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #444;
+            border-top: 1px solid rgba(70, 130, 180, 0.15);
+            background: rgba(255, 255, 255, 0.55);
+        }
+
+        .detail-body p {
+            margin: 14px 0 0 0;
+        }
     </style>
 </head>
 
@@ -293,11 +383,11 @@
 
     <table>
         <tr>
-            <td class="date" rowspan="2">
+            <td class="date" rowspan="3">
                 12:10–12:50
             </td>
             <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
+                <sup class="keynote-mark">*</sup>Efficient Sampling with Discrete Diffusion Models: Sharp and Adaptive Guarantees
             </td>
         </tr>
         <tr>
@@ -306,6 +396,39 @@
                 <span class="info-content">
                     <span class="author-line"><span class="author-name">Yuting Wei</span> (University of Pennsylvania)</span>
                 </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="talk-extra">
+                <div class="talk-detail-wrap">
+                    <details class="talk-detail">
+                        <summary>
+                            <span class="detail-heading">
+                                <i class="fas fa-align-left"></i>
+                                Abstract
+                            </span>
+                        </summary>
+                        <div class="detail-body">
+                            <p>
+                                Diffusion models over discrete spaces have recently shown striking empirical success, yet their theoretical foundations remain incomplete. In this talk, we explore the sampling efficiency of score-based discrete diffusion models under a continuous-time Markov chain formulation, with a focus on $\tau$-leaping-based samplers. We establish sharp convergence guarantees for attaining $\epsilon$ accuracy in Kullback-Leibler divergence for both uniform and masking noising processes. (1) For uniform discrete diffusion, we show that the $\tau$-leaping algorithm achieves an iteration complexity of order $O(d/\epsilon)$, with $d$ the ambient dimension of the target distribution, eliminating linear dependence on the vocabulary size $S$ and improving existing bounds by a factor of $d$. (2) For masking discrete diffusion, we introduce a modified $\tau$-leaping sampler whose convergence rate is governed by an intrinsic information-theoretic quantity, termed the effective total correlation, which is bounded by $d \log S$ but can be sublinear or even constant for structured data. As a consequence, the sampler provably adapts to low-dimensional structure without prior knowledge or algorithmic modification, yielding sublinear convergence rates for various practical examples, such as hidden Markov models, image data, and random graphs.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="talk-detail">
+                        <summary>
+                            <span class="detail-heading">
+                                <i class="fas fa-user"></i>
+                                Bio
+                            </span>
+                        </summary>
+                        <div class="detail-body">
+                            <p>
+                                Dr. Yuting Wei is an Associate Professor in the Statistics and Data Science Department at the Wharton School, University of Pennsylvania. Prior to that, Dr. Wei spent two years at Carnegie Mellon University as an assistant professor and one year at Stanford University as a Stein's Fellow. She received her Ph.D. in statistics at the University of California, Berkeley. She was the recipient of the 2026 Peter Gavin Hall IMS Early Career Prize, the 2025 Gottfried E. Noether Early Career Scholar Award, Google Research Scholar Award, NSF Career award, and the Erich L. Lehmann Citation from the Berkeley statistics department. Her research interests include high-dimensional and non-parametric statistics, reinforcement learning, and diffusion models.
+                            </p>
+                        </div>
+                    </details>
+                </div>
             </td>
         </tr>
     </table>
@@ -515,4 +638,3 @@
 
 </body>
 </html>
-
