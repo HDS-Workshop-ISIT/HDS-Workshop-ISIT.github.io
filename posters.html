@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href=".">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Posters - Universality and Dynamics Workshop">
+    <title>Posters - Universality and Dynamics Workshop</title>
+
+    <style>
+        /* --- Global default font: Sans-serif --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Banner image style */
+        .banner {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            line-height: 0;
+            border-bottom: 5px solid #eee;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* --- Header info style --- */
+        .header-info {
+            padding: 30px 0;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .header-info .main-title {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .header-info .meta-info {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #666;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .header-info i {
+            color: #555;
+            margin-right: 5px;
+            width: 15px;
+            text-align: center;
+        }
+
+        /* --- Page title style (Red Serif) --- */
+        h2 {
+            font-family: Georgia, "Times New Roman", Times, serif !important;
+            color: #8B3A3A !important;
+            font-weight: normal;
+            font-size: 2.2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        h2 i {
+            margin-right: 12px;
+            font-size: 0.9em;
+        }
+
+        /* --- Intro note --- */
+        .poster-note {
+            font-size: 17px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 36px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #8B3A3A;
+        }
+
+        .poster-note i {
+            margin-right: 8px;
+            color: #8B3A3A;
+        }
+
+        /* --- Posters list --- */
+        .posters-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        .poster-item {
+            display: flex;
+            gap: 20px;
+            padding: 22px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .poster-item:last-child {
+            border-bottom: none;
+        }
+
+        .poster-index {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(139, 58, 58, 0.10), rgba(70, 130, 180, 0.12));
+            border: 1px solid rgba(70, 130, 180, 0.30);
+            color: #8B3A3A;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .poster-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .poster-title {
+            color: #8B3A3A;
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .poster-authors {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .author-name {
+            color: #4682B4;
+            font-style: normal;
+        }
+
+        @media (max-width: 600px) {
+            .poster-title {
+                font-size: 20px;
+            }
+            .poster-authors {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/Guangzhou.jpg" alt="Workshop Banner">
+    </div>
+
+    <div class="header-info">
+        <div class="main-title">
+            <span style="color: #8B3A3A;">Universality and Dynamics</span><br>
+            <span style="color: #4682B4;">in High-Dimensional Learning and Inference</span>
+        </div>
+
+        <div class="meta-info">
+            <i class="fas fa-calendar-alt"></i> ISIT Workshop 2026 July 3 &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fas fa-map-marker-alt"></i> Location: 2026 Guangzhou, China
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Home Page" href="index.html">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Call for Papers" href="call-for-papers.html">Call for Papers</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Program" href="program.html">Program</a>
+            </td>
+            <td class="navigation">
+                <a class="current" title="Posters" href="posters.html">Posters</a>
+            </td>
+            <td class="navigation">
+                <a title="Plenary Speakers" href="invited-speakers.html">Plenary Speakers</a>
+            </td>
+        </tr>
+    </table>
+
+    <h2><i class="fas fa-images"></i>Posters</h2>
+
+    <div class="poster-note">
+        <i class="fas fa-info-circle"></i> Accepted posters for the workshop are listed below.
+    </div>
+
+    <div class="posters-wrapper">
+
+        <div class="poster-item">
+            <div class="poster-index">1</div>
+            <div class="poster-body">
+                <div class="poster-title">Proof of The TAP Free Energy for High-Dimensional Linear Regression with Spherical Priors at All Temperatures</div>
+                <div class="poster-authors">
+                    <span class="author-name">Zhiyuan Yu</span>, <span class="author-name">Jingbo Liu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">2</div>
+            <div class="poster-body">
+                <div class="poster-title">Selective Pruning of Informative Eigenvalues for Noise-Robust Model Merging</div>
+                <div class="poster-authors">
+                    <span class="author-name">Wenbo Li</span>, <span class="author-name">Hanjie Yang</span>, <span class="author-name">Hongxin Wei</span>, <span class="author-name">Zeng Li</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">3</div>
+            <div class="poster-body">
+                <div class="poster-title">Sequential Machine Unlearning</div>
+                <div class="poster-authors">
+                    <span class="author-name">Chen Shang</span>, <span class="author-name">Binghe Zhu</span>, <span class="author-name">Haolin Zou</span>, <span class="author-name">Arian Maleki</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">4</div>
+            <div class="poster-body">
+                <div class="poster-title">Accelerating Conformal Prediction via Approximate Leave-One-Out</div>
+                <div class="poster-authors">
+                    <span class="author-name">Jiachen Cong</span>, <span class="author-name">Jingbo Liu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">5</div>
+            <div class="poster-body">
+                <div class="poster-title">A Conditional-Gaussian View of Score Universality Through Low-Dimensional Statistics</div>
+                <div class="poster-authors">
+                    <span class="author-name">Cosme Louart</span>, <span class="author-name">Zhenyu Liao</span>, <span class="author-name">Malik Tiomoko</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">6</div>
+            <div class="poster-body">
+                <div class="poster-title">Universality of First-Order Methods on Random and Deterministic Matrices</div>
+                <div class="poster-authors">
+                    <span class="author-name">Nicola Gorini</span>, <span class="author-name">Chris Jones</span>, <span class="author-name">Dmitriy Kunisky</span>, <span class="author-name">Lucas Pesenti</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">7</div>
+            <div class="poster-body">
+                <div class="poster-title">Free Energy Universality in Tensor Estimation via Generic Chaining</div>
+                <div class="poster-authors">
+                    <span class="author-name">Wenxuan Zou</span>, <span class="author-name">Galen Reeves</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">8</div>
+            <div class="poster-body">
+                <div class="poster-title">An Efficient Pseudo Dataset Generation Method for Communication-Efficient Federated Learning</div>
+                <div class="poster-authors">
+                    <span class="author-name">Cheng Yang</span>, <span class="author-name">Xue Yang</span>, <span class="author-name">Lanping Li</span>, <span class="author-name">Xiaohu Tang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">9</div>
+            <div class="poster-body">
+                <div class="poster-title">An Information-Theoretic Analysis of OOD Generalization in Meta-Reinforcement Learning</div>
+                <div class="poster-authors">
+                    <span class="author-name">Xingtu Liu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">10</div>
+            <div class="poster-body">
+                <div class="poster-title">New Characterizations of Deep Neural Networks Beyond the Ultra-Wide Regime</div>
+                <div class="poster-authors">
+                    <span class="author-name">Yuze Xu</span>, <span class="author-name">Zhenyu Liao</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">11</div>
+            <div class="poster-body">
+                <div class="poster-title">An Information-Theoretic Indicator of Underfitting and Overfitting in Supervised Learning with Dimension-Robust Behavior: Application to Logistic Regression</div>
+                <div class="poster-authors">
+                    <span class="author-name">Geoffrey Deperle</span>, <span class="author-name">Philippe Jacquet</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">12</div>
+            <div class="poster-body">
+                <div class="poster-title">Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise</div>
+                <div class="poster-authors">
+                    <span class="author-name">Haohua Chen</span>, <span class="author-name">Junjie Ma</span>, <span class="author-name">Songbin Liu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">13</div>
+            <div class="poster-body">
+                <div class="poster-title">Low-rank Matrix Recovery from Rank One Measurements</div>
+                <div class="poster-authors">
+                    <span class="author-name">Xiang Li</span>, <span class="author-name">Junjie Ma</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-item">
+            <div class="poster-index">14</div>
+            <div class="poster-body">
+                <div class="poster-title">Unifying AMP Algorithms for Rotationally-Invariant Models</div>
+                <div class="poster-authors">
+                    <span class="author-name">Songbin Liu</span>, <span class="author-name">Junjie Ma</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p style="font-size: 12px; color: #999; text-align: center;">
+        Page views: <span id="busuanzi_value_site_pv"></span> | Visitors: <span id="busuanzi_value_site_uv"></span>
+    </p>
+
+    <footer>
+        &copy; Universality and Dynamics Workshop 2026
+    </footer>
+
+</body>
+
+</html>
