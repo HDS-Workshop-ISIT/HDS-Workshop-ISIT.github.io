@@ -415,11 +415,11 @@
 
     <table>
         <tr>
-            <td class="date" rowspan="2">
+            <td class="date" rowspan="3">
                 11:30–12:10
             </td>
             <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
+                <sup class="keynote-mark">*</sup>Dimension-Free Bounds for Generalized First-Order Methods via Gaussian Coupling
             </td>
         </tr>
         <tr>
@@ -428,6 +428,12 @@
                 <span class="info-content">
                     <span class="author-line"><span class="author-name">Galen Reeves</span> (Duke University)</span>
                 </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="talk-extra">
+                <div class="talk-detail-wrap">
+                </div>
             </td>
         </tr>
     </table>
@@ -452,152 +458,7 @@
         <tr>
             <td class="talk-extra">
                 <div class="talk-detail-wrap">
-                    <details class="talk-detail">
-                        <summary>
-                            <span class="detail-heading">
-                                <i class="fas fa-align-left"></i>
-                                Abstract
-                            </span>
-                        </summary>
-                        <div class="detail-body">
-                            <p>
-                                Diffusion models over discrete spaces have recently shown striking empirical success, yet their theoretical foundations remain incomplete. In this talk, we explore the sampling efficiency of score-based discrete diffusion models under a continuous-time Markov chain formulation, with a focus on &tau;-leaping-based samplers. We establish sharp convergence guarantees for attaining &epsilon; accuracy in Kullback-Leibler divergence for both uniform and masking noising processes. (1) For uniform discrete diffusion, we show that the &tau;-leaping algorithm achieves an iteration complexity of order O(d/&epsilon;), with d the ambient dimension of the target distribution, eliminating linear dependence on the vocabulary size S and improving existing bounds by a factor of d. (2) For masking discrete diffusion, we introduce a modified &tau;-leaping sampler whose convergence rate is governed by an intrinsic information-theoretic quantity, termed the effective total correlation, which is bounded by d log S but can be sublinear or even constant for structured data. As a consequence, the sampler provably adapts to low-dimensional structure without prior knowledge or algorithmic modification, yielding sublinear convergence rates for various practical examples, such as hidden Markov models, image data, and random graphs.
-                            </p>
-                        </div>
-                    </details>
                 </div>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                12:50–14:00
-            </td>
-            <td class="title-special">
-                Lunch Break
-            </td>
-        </tr>
-    </table>
-
-    <h3 class="session-header">
-        Technical Session 3
-        <span class="session-time">14:00 – 15:20</span>
-    </h3>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="3">
-                14:00–14:40
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Bruno Loureiro</span> (CNRS / École Normale Supérieure, Paris)</span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <td class="talk-extra">
-                <div class="talk-detail-wrap">
-                    <details class="talk-detail">
-                        <summary>
-                            <span class="detail-heading">
-                                <i class="fas fa-align-left"></i>
-                                Abstract
-                            </span>
-                        </summary>
-                        <div class="detail-body">
-                            <p>
-                                Neural scaling laws underlie many of the recent advances in deep learning, yet their theoretical understanding remains largely confined to linear models. In this work, we present a systematic analysis of scaling laws for shallow neural networks in the feature learning regime. Leveraging connections with matrix compressed sensing and LASSO, we derive a detailed phase diagram for the scaling exponents of the excess risk as a function of sample complexity and weight decay. This analysis uncovers crossovers between distinct scaling regimes and plateau behaviours, mirroring phenomena widely reported in the empirical neural scaling literature. Furthermore, we establish a precise link between these regimes and the spectral properties of the trained network weights, which we characterize in detail. Consequently, we provide a theoretical validation of recent empirical observations connecting the emergence of power-law tails in the weight spectrum with network generalization performance, yielding an interpretation from first principles.
-                            </p>
-                        </div>
-                    </details>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                14:40–15:00
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>A Conditional-Gaussian View of Score Universality Through Low-Dimensional Statistics
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Cosme Louart</span> (Chinese University of Hong Kong, Shenzhen)</span>
-                    <span class="author-line"><span class="author-name">Zhenyu Liao</span> (Huazhong University of Science and Technology)</span>
-                    <span class="author-line"><span class="author-name">Malik Tiomoko</span> (Huawei Technologies France)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                15:00–15:20
-            </td>
-            <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Universality of First-Order Methods on Random and Deterministic Matrices
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Nicola Gorini</span> (Bocconi University)</span>
-                    <span class="author-line"><span class="author-name">Chris Jones</span> (UC Davis)</span>
-                    <span class="author-line"><span class="author-name">Dmitriy Kunisky</span> (Johns Hopkins University)</span>
-                    <span class="author-line"><span class="author-name">Lucas Pesenti</span> (ETH Zürich)</span>
-                </span>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date">
-                15:20–15:40
-            </td>
-            <td class="title-special">
-                Tea Break &amp; Poster Discussion
-            </td>
-        </tr>
-    </table>
-
-    <h3 class="session-header">
-        Technical Session 4
-        <span class="session-time">15:40 – 18:00</span>
-    </h3>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="2">
-                15:40–16:20
-            </td>
-            <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
-            </td>
-        </tr>
-        <tr>
-            <td class="info">
-                <span class="info-label">Authors:</span>
-                <span class="info-content">
-                    <span class="author-line"><span class="author-name">Qiyang Han</span> (Rutgers University)</span>
-                </span>
             </td>
         </tr>
     </table>
