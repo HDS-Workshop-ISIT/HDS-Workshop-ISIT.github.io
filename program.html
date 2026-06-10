@@ -132,7 +132,8 @@
         }
 
         .session-legend .keynote-mark,
-        .session-legend .spotlight-mark {
+        .session-legend .spotlight-mark,
+        .session-legend .invited-mark {
             font-size: 85%;
         }
 
@@ -148,6 +149,33 @@
             font-weight: 700;
             font-size: 70%;
             margin-right: 5px;
+        }
+
+        .invited-mark {
+            color: #6f4aa8;
+            font-weight: 700;
+            font-size: 70%;
+            margin-right: 5px;
+        }
+
+        .talk-type-label {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 3px 9px;
+            border-radius: 999px;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 600;
+            vertical-align: middle;
+            color: #555;
+            background: rgba(70, 130, 180, 0.10);
+            border: 1px solid rgba(70, 130, 180, 0.25);
+        }
+
+        .talk-type-label.invited {
+            color: #6f4aa8;
+            background: rgba(111, 74, 168, 0.10);
+            border-color: rgba(111, 74, 168, 0.25);
         }
 
         td.title {
@@ -263,7 +291,7 @@
         }
 
         .talk-detail[open] summary::after {
-            content: "−";
+            content: "âˆ’";
             background: #8B3A3A;
         }
 
@@ -343,17 +371,18 @@
 
     <h3 class="session-header">
         Technical Session 1
-        <span class="session-time">09:50 – 11:10</span>
+        <span class="session-time">09:50 â€“ 11:10</span>
         <span class="session-legend">
             <sup class="keynote-mark">*</sup> Keynote talk &nbsp;&nbsp;
-            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk
+            <sup class="invited-mark">&Dagger;</sup> Invited talk &nbsp;&nbsp;
+            <sup class="spotlight-mark">&dagger;</sup> Spotlight talk / Oral presentation
         </span>
     </h3>
 
     <table>
         <tr>
             <td class="date">
-                09:50–09:55
+                09:50â€“09:55
             </td>
             <td class="title-special">
                 Opening Remarks
@@ -364,7 +393,7 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                09:55–10:35
+                09:55â€“10:35
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>TBA
@@ -383,10 +412,10 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                10:35–10:55
+                10:35â€“10:55
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Accelerating Conformal Prediction via Approximate Leave-One-Out
+                <sup class="spotlight-mark">&dagger;</sup>Accelerating Conformal Prediction via Approximate Leave-One-Out<span class="talk-type-label">Oral presentation</span>
             </td>
         </tr>
         <tr>
@@ -403,7 +432,7 @@
     <table>
         <tr>
             <td class="date">
-                10:55–11:30
+                10:55â€“11:30
             </td>
             <td class="title-special">
                 Tea Break &amp; Poster Discussion
@@ -413,13 +442,13 @@
 
     <h3 class="session-header">
         Technical Session 2
-        <span class="session-time">11:30 – 12:50</span>
+        <span class="session-time">11:30 â€“ 12:50</span>
     </h3>
 
     <table>
         <tr>
             <td class="date" rowspan="3">
-                11:30–12:10
+                11:30â€“12:10
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>Dimension-Free Bounds for Generalized First-Order Methods via Gaussian Coupling
@@ -458,7 +487,7 @@
     <table>
         <tr>
             <td class="date" rowspan="3">
-                12:10–12:50
+                12:10â€“12:50
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>Efficient Sampling with Discrete Diffusion Models: Sharp and Adaptive Guarantees
@@ -496,7 +525,7 @@
     <table>
         <tr>
             <td class="date">
-                12:50–14:00
+                12:50â€“14:00
             </td>
             <td class="title-special">
                 Lunch Break
@@ -506,13 +535,13 @@
 
     <h3 class="session-header">
         Technical Session 3
-        <span class="session-time">14:00 – 15:20</span>
+        <span class="session-time">14:00 â€“ 15:20</span>
     </h3>
 
     <table>
         <tr>
             <td class="date" rowspan="3">
-                14:00–14:40
+                14:00â€“14:40
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>Scaling Laws and Spectra of Shallow Neural Networks in the Feature-Learning Regime
@@ -522,7 +551,7 @@
             <td class="info">
                 <span class="info-label">Authors:</span>
                 <span class="info-content">
-                    <span class="author-line"><span class="author-name">Bruno Loureiro</span> (CNRS / École Normale Supérieure, Paris)</span>
+                    <span class="author-line"><span class="author-name">Bruno Loureiro</span> (CNRS / Ã‰cole Normale SupÃ©rieure, Paris)</span>
                 </span>
             </td>
         </tr>
@@ -550,10 +579,10 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                14:40–15:00
+                14:40â€“15:00
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>A Conditional-Gaussian View of Score Universality Through Low-Dimensional Statistics
+                <sup class="spotlight-mark">&dagger;</sup>A Conditional-Gaussian View of Score Universality Through Low-Dimensional Statistics<span class="talk-type-label">Oral presentation</span>
             </td>
         </tr>
         <tr>
@@ -571,10 +600,10 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                15:00–15:20
+                15:00â€“15:20
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Universality of First-Order Methods on Random and Deterministic Matrices
+                <sup class="invited-mark">&Dagger;</sup>Universality of First-Order Methods on Random and Deterministic Matrices<span class="talk-type-label invited">Invited talk</span>
             </td>
         </tr>
         <tr>
@@ -584,7 +613,7 @@
                     <span class="author-line"><span class="author-name">Nicola Gorini</span> (Bocconi University)</span>
                     <span class="author-line"><span class="author-name">Chris Jones</span> (UC Davis)</span>
                     <span class="author-line"><span class="author-name">Dmitriy Kunisky</span> (Johns Hopkins University)</span>
-                    <span class="author-line"><span class="author-name">Lucas Pesenti</span> (ETH Zürich)</span>
+                    <span class="author-line"><span class="author-name">Lucas Pesenti</span> (ETH ZÃ¼rich)</span>
                 </span>
             </td>
         </tr>
@@ -593,7 +622,7 @@
     <table>
         <tr>
             <td class="date">
-                15:20–15:40
+                15:20â€“15:40
             </td>
             <td class="title-special">
                 Tea Break &amp; Poster Discussion
@@ -603,13 +632,13 @@
 
     <h3 class="session-header">
         Technical Session 4
-        <span class="session-time">15:40 – 18:00</span>
+        <span class="session-time">15:40 â€“ 18:00</span>
     </h3>
 
     <table>
         <tr>
             <td class="date" rowspan="3">
-                15:40–16:20
+                15:40â€“16:20
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>General First Order Methods: Entrywise dynamics, universality and algorithmic inference
@@ -654,7 +683,7 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                16:20–17:00
+                16:20â€“17:00
             </td>
             <td class="title">
                 <sup class="keynote-mark">*</sup>TBA
@@ -673,7 +702,7 @@
     <table>
         <tr>
             <td class="date">
-                17:00–17:15
+                17:00â€“17:15
             </td>
             <td class="title-special">
                 Break
@@ -684,10 +713,10 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                17:15–17:35
+                17:15â€“17:35
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Free Energy Universality in Tensor Estimation via Generic Chaining
+                <sup class="spotlight-mark">&dagger;</sup>Free Energy Universality in Tensor Estimation via Generic Chaining<span class="talk-type-label">Oral presentation</span>
             </td>
         </tr>
         <tr>
@@ -704,10 +733,10 @@
     <table>
         <tr>
             <td class="date" rowspan="2">
-                17:35–17:55
+                17:35â€“17:55
             </td>
             <td class="title">
-                <sup class="spotlight-mark">&dagger;</sup>Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise
+                <sup class="spotlight-mark">&dagger;</sup>Optimal Spectral Initialization for Orthogonal Approximate Message Passing for Spiked Matrix Models Under Rotationally Invariant Noise<span class="talk-type-label">Oral presentation</span>
             </td>
         </tr>
         <tr>
@@ -725,7 +754,7 @@
     <table>
         <tr>
             <td class="date">
-                17:55–18:00
+                17:55â€“18:00
             </td>
             <td class="title-special">
                 Closing Remarks
@@ -741,5 +770,7 @@
         &copy; Universality and Dynamics Workshop 2026
     </footer>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7939e04a4baf43c8b86a560f74aac60e","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"45c2bf8136a245cd97f1c2e9a96c0730","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
