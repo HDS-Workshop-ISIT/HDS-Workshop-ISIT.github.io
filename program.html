@@ -393,11 +393,11 @@
 
     <table>
         <tr>
-            <td class="date" rowspan="2">
+            <td class="date" rowspan="3">
                 09:55&ndash;10:35
             </td>
             <td class="title">
-                <sup class="keynote-mark">*</sup>TBA
+                <sup class="keynote-mark">*</sup>A Personal Tour of Approximate Bayesian Inference in Linear and Bilinear Systems
             </td>
         </tr>
         <tr>
@@ -406,6 +406,35 @@
                 <span class="info-content">
                     <span class="author-line"><span class="author-name">Dirk Slock</span> (EURECOM)</span>
                 </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="talk-extra">
+                <div class="talk-detail-wrap">
+                    <details class="talk-detail">
+                        <summary>
+                            <span class="detail-heading">
+                                <i class="fas fa-align-left"></i>
+                                Abstract
+                            </span>
+                        </summary>
+                        <div class="detail-body">
+                            <p>
+                                Approximate Bayesian inference in high-dimensional systems is often enabled by approximate message passing methods. In linear models, Generalized Approximate Message Passing (GAMP) handles non-identically independently distributed (niid) priors and niid measurement channels applied to niid linear-mixture outputs. GAMP was originally derived through large-system-limit approximations of belief propagation, which can be viewed as an alternating-minimization procedure for the Lagrangian of the Bethe free energy.
+                            </p>
+                            <p>
+                                To obtain algorithms with stronger convergence behavior, it is natural to move from approximate alternating minimization to exact alternating minimization on a large-system-limit Bethe free energy. I will discuss two such approaches: one inspired by ADMM, and another that alternately enforces the Karush-Kuhn-Tucker conditions. To avoid repeated matrix inversions, we introduce adaptive and accelerated gradient-descent variants, where the choice of adaptation is crucial for stability and speed.
+                            </p>
+                            <p>
+                                Bilinear models arise in semi-blind multi-user MIMO channel estimation and provide a route to mitigating pilot contamination. Starting from second-order statistics of the unknown data, we derive a tight Bayesian Cramér-Rao bound, where a key expectation is simplified by large-system asymptotics. I will then review message-passing-type approximate MMSE algorithms based on expectation propagation, highlighting how different levels of prior information can be exploited.
+                            </p>
+                            <p>
+                                The talk will also compare several complexity variants, including their impact on convergence speed, estimation performance, and distributed implementation. I will conclude by outlining open directions, including convergence theory, further asymptotic simplifications, more decentralized semi-blind architectures, and acceleration.
+                            </p>
+                        </div>
+                    </details>
+
+                </div>
             </td>
         </tr>
     </table>
